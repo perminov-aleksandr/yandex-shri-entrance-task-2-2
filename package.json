@@ -1,0 +1,16 @@
+{
+  "name": "shri-2018-2-task-2",
+  "version": "1.0.0",
+  "main": "scripts/index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "sass styles/index.scss styles/index.css"
+  },
+  "devDependencies": {
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "sass": "^1.11.0"
+  },
+  "dependencies": {}
+}

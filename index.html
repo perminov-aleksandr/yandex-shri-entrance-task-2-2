@@ -1,8 +1,111 @@
 <html>
     <head>
         <title>Яндекс.Дом</title>
-    </head>
+        <link rel="stylesheet" type="text/css" href="styles/index.css" >
+    </head>    
     <body>
-        
+        <div class="page">
+            <div class="header">
+                <div class="header__logo">
+                    <a href="#" class="header__logo__link">
+                        <img class="header__logo__img" src="images/yandex_home_logo.svg" />
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <a href="#" class="header__menu__item header__menu__item_active">Сводка</a>
+                    <a href="#" class="header__menu__item">Устройства</a>
+                    <a href="#" class="header__menu__item">Сценарии</a>
+                </nav>
+            </div>
+            <div class="summary">
+                <div class="summary__header">
+                    Главное
+                </div>
+                <div class="summary__content">
+                    <div class="summary__content__info">
+                        <div class="summary__content__info__header">
+                            Привет, Геннадий!
+                        </div>
+                        <div class="summary__content__info__subheader">
+                            Двери и окна закрыты, сигнализация включена.
+                        </div>
+                        <div class="summary__content__info__weather-list">
+                            <div class="weather">
+                                <span class="weather__place">
+                                    Дома
+                                </span>
+                                <span class="weather__temperature">
+                                    +23
+                                </span>
+                            </div>
+                            <div class="weather">
+                                <span class="weather__place">
+                                    За окном
+                                </span>
+                                <span class="weather__temperature">
+                                    +19
+                                </span>
+                                <span class="weather__icon weather__icon-rain"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary__content__queue">
+                        <div class="summary__content__queue__item card">
+                            <div class="card__icon card__icon_temperature">                               
+                            </div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Philips Cooler                                
+                                </div>
+                                <div class="card__description">
+                                    Начнет охлаждать в 16:30
+                                </div>
+                            </div>
+                        </div>
+                        <div class="summary__content__queue__item card">
+                            <div class="card__icon card__icon_light">                                
+                            </div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Xiaomi Yeelight LED Smart Bulb                               
+                                </div>
+                                <div class="card__description">
+                                    Включится в 17:00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><div class="favourite-scripts">
+                <div class="favourite-scripts__header">
+                    Избранные сценарии
+                </div>
+                <div class="favourite-scripts__content">
+                    <div class="card">
+                        <div class="card__icon card__icon-light">
+                            
+                        </div>
+                        <div class="card__info">
+                            <div class="card__name">
+                                Xiaomi Yeelight LED Smart Bulb                               
+                            </div>
+                            <div class="card__description">
+                                Включится в 17:00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="devices">
+
+            </div>
+            <div class="footer">
+                <a href="#" class="footer__link">Помощь</a>
+                <a href="#" class="footer__link">Обратная связь</a>
+                <a href="#" class="footer__link">Разработчикам</a>
+                <a href="#" class="footer__link">Условия использования</a>
+            </div>
+        </div>
     </body>
+    <script src="index.js" />
 </html>

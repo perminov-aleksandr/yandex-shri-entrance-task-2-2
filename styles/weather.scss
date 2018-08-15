@@ -1,0 +1,32 @@
+.weather {
+    display: inline-block;
+    margin-right: 18px;
+}
+
+.weather__place {
+    display: block;
+    color: #858585;
+    line-height: 16px;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.weather__temperature {
+    display: inline-block;
+    line-height: 42px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.weather__icon {
+    display: inline-block;
+    margin: 5px;    
+    height: 26px;
+    width: 26px;
+}
+
+.weather__icon-rain {
+    background-image: url('../images/cloud-drizzle.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}

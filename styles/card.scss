@@ -1,0 +1,50 @@
+$card-padding: 14px;
+
+.card {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 200px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: #F7F7F7;    
+    position: relative;
+}
+
+.card__icon {    
+    position: absolute;
+    top: $card-padding;
+    left: $card-padding;
+    width: 24px;
+    height: 24px;
+}
+
+.card__icon_temperature {
+    background-image: url('../images/icon_temperature.svg');
+    background-size: contain;
+}
+
+.card__icon_light {
+    background-image: url('../images/icon_sun.svg');
+    background-size: contain;
+}
+
+.card__info {
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;   
+    left: 0; 
+    padding: $card-padding;
+}
+
+.card__name {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.card__description {
+    color: #858585;
+    font-size: 12px;
+    line-height: 14px;
+}
