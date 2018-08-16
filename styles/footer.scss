@@ -1,13 +1,15 @@
+@import 'variables';
+
 $footer-height: 64px;
 
 .footer {
-    position: fixed;
-    bottom: 0;
+    // position: fixed;
+    // bottom: 0;
     display: block;
-    width: 100%;
+    // width: 100%;
     height: $footer-height;
 
-    background-color: $background-color;    
+    background-color: $background-color;
 
     padding: 0 22px 0 27px;
     line-height: $footer-height;

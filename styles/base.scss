@@ -1,3 +1,4 @@
+@import 'variables';
 
 html, body {
     margin: 0;
@@ -16,12 +17,10 @@ html, body {
     font-size: 14px;
 }
 
-.favourite-scripts {
+.page__content {
+    width: 1366px;
+    padding-top: $header-height;
+    display: block;
     box-sizing: border-box;
-    display: inline-block;
-    width: 50%;
-    padding-left: 40px;
-    padding-top: 30px;
-    padding-bottom: 5px;
-    padding-right: 5px;
+    margin: 40px;
 }

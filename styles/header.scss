@@ -1,5 +1,6 @@
-$header-height: 92px;
-$border-color: #eee;
+@import 'variables';
+
+$border-color: #F0F0F0;
 
 .header {
     box-sizing: border-box;
@@ -10,6 +11,8 @@ $border-color: #eee;
 
     background-color: $background-color;
     border-bottom: 1px solid $border-color;
+    position: fixed;
+    top: 0;        
 
     //line-height: $header-height;    
 }

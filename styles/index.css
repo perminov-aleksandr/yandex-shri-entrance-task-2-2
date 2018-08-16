@@ -2,8 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100%;
-}
+  width: 100%; }
 
 .page {
   display: block;
@@ -11,18 +10,14 @@ html, body {
   width: 100%;
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-}
+  font-size: 14px; }
 
-.favourite-scripts {
+.page__content {
+  width: 1366px;
+  padding-top: 92px;
+  display: block;
   box-sizing: border-box;
-  display: inline-block;
-  width: 50%;
-  padding-left: 40px;
-  padding-top: 30px;
-  padding-bottom: 5px;
-  padding-right: 5px;
-}
+  margin: 40px; }
 
 .header {
   box-sizing: border-box;
@@ -31,33 +26,29 @@ html, body {
   height: 92px;
   padding: 0 40px;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
-}
+  border-bottom: 1px solid #F0F0F0;
+  position: fixed;
+  top: 0; }
 
 .header:before {
   content: "";
   display: inline-block;
   height: 100%;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 .header__logo {
-  display: inline-block;
-}
+  display: inline-block; }
 
 .header__logo__link {
   vertical-align: middle;
-  display: inline-block;
-}
+  display: inline-block; }
 
 .header__logo__img {
-  height: 39px;
-}
+  height: 39px; }
 
 .header__menu {
   display: inline-block;
-  padding: 0 26px;
-}
+  padding: 0 26px; }
 
 .header__menu__item {
   font-size: 16px;
@@ -67,23 +58,17 @@ html, body {
   opacity: 0.6;
   padding: 0 13px;
   vertical-align: middle;
-  vertical-align: -webkit-baseline-middle;
-}
+  vertical-align: -webkit-baseline-middle; }
 
 .header__menu__item_active {
-  opacity: 1;
-}
+  opacity: 1; }
 
 .footer {
-  position: fixed;
-  bottom: 0;
   display: block;
-  width: 100%;
   height: 64px;
   background-color: #fff;
   padding: 0 22px 0 27px;
-  line-height: 64px;
-}
+  line-height: 64px; }
 
 .footer__link {
   display: inline-block;
@@ -92,8 +77,7 @@ html, body {
   letter-spacing: 0.01px;
   text-decoration: none;
   padding: 0 10px;
-  line-height: normal;
-}
+  line-height: normal; }
 
 .card {
   box-sizing: border-box;
@@ -103,7 +87,13 @@ html, body {
   border-radius: 20px;
   background-color: #F7F7F7;
   position: relative;
-}
+  margin-bottom: 15px;
+  margin-right: 15px; }
+
+.card:hover {
+  background: #ffffff;
+  box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
+  cursor: pointer; }
 
 .card__icon {
   position: absolute;
@@ -111,127 +101,186 @@ html, body {
   left: 14px;
   width: 24px;
   height: 24px;
-}
+  background-size: contain; }
 
 .card__icon_temperature {
-  background-image: url("../images/icon_temperature.svg");
-  background-size: contain;
-}
+  background-image: url("../images/icon_temperature.svg"); }
 
 .card__icon_light {
-  background-image: url("../images/icon_sun.svg");
-  background-size: contain;
-}
+  background-image: url("../images/icon_sun.svg"); }
+
+.card__icon_clock {
+  background-image: url("../images/icon_scheduled.svg"); }
+
+.card__icon_temperature-active {
+  background-image: url("../images/icon_temperature_2.svg"); }
+
+.card__icon_light-active {
+  background-image: url("../images/icon_sun_2.svg"); }
+
+.card__icon_clock-active {
+  background-image: url("../images/icon_scheduled.svg"); }
 
 .card__info {
-  width: 100%;
   display: inline-block;
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 14px;
-}
+  padding: 14px; }
 
 .card__name {
   font-weight: bold;
   font-size: 14px;
-  line-height: 16px;
-}
+  line-height: 16px; }
 
 .card__description {
   color: #858585;
   font-size: 12px;
-  line-height: 14px;
-}
+  line-height: 14px; }
 
 .summary {
   box-sizing: border-box;
   display: inline-block;
-  width: 50%;
-  padding-left: 40px;
-  padding-top: 30px;
-  padding-bottom: 5px;
-  padding-right: 5px;
-  line-height: 31px;
-}
+  width: 630px;
+  padding-right: 26px;
+  padding-bottom: 10px; }
 
 .summary__header {
   color: #333;
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .summary__content {
   border-radius: 20px;
   background-image: url("../images/summary-bg@1x.png");
   background-size: cover;
   min-height: 300px;
-  padding: 20px;
-}
+  padding: 20px; }
 
 .summary__content__info {
-  display: inline-block;
-}
+  display: inline-block; }
 
 .summary__content__queue {
   display: block;
   width: 200px;
-  float: right;
-}
+  float: right; }
 
 .summary__content__queue__item {
-  margin-bottom: 15px;
-}
+  margin-bottom: 15px; }
 
 .summary__content::after {
-  clear: both;
-}
+  clear: both; }
 
 .summary__content__info__header {
   font-size: 27px;
   font-weight: bold;
-  color: #333;
-}
+  color: #333; }
 
 .summary__content__info__subheader {
   line-height: 16px;
   font-size: 14px;
   color: #333;
-  margin-bottom: 25px;
-}
+  margin-bottom: 25px; }
+
+.favourite-scripts {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 630px;
+  vertical-align: top; }
+
+.favourite-scripts__header {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px; }
+
+.favourite-scripts__header__paging {
+  float: right;
+  padding-top: 5px; }
+
+.favourite-scripts__header__paging::after {
+  clear: both; }
+
+.favourite-scripts__header__paging__btn {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  cursor: pointer; }
+
+.favourite-scripts__header__paging__btn-prev {
+  background-image: url("../images/Icons/arrow-left.svg"); }
+
+.favourite-scripts__header__paging__btn-next {
+  background-image: url("../images/Icons/arrow-left.svg");
+  transform: scaleX(-1); }
+
+.favourite-scripts__content .card:nth-child(3n) {
+  margin-right: 0; }
+
+.favourite-devices {
+  display: inline-block; }
+
+.favourite-devices__header {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 21px;
+  padding-top: 34px;
+  padding-bottom: 20px; }
+
+.favourite-devices__content {
+  height: 130px;
+  padding-top: 5px;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.favourite-devices__content > * {
+  white-space: initial; }
+
+.favourite-devices__filters {
+  display: inline-block;
+  padding: 0 13px; }
+
+.favourite-devices__filters__item {
+  height: 30px;
+  border-radius: 20px;
+  background-color: #F7F7F7;
+  color: #000;
+  font-size: 13px;
+  line-height: 15px;
+  padding: 7px 11px 8px 15px;
+  font-weight: bold;
+  margin-right: 10px; }
+
+.favourite-devices__filters__item_active {
+  background-color: #FFD93E; }
 
 .weather {
   display: inline-block;
-  margin-right: 18px;
-}
+  margin-right: 18px; }
 
 .weather__place {
   display: block;
   color: #858585;
   line-height: 16px;
   font-size: 14px;
-  margin-bottom: 4px;
-}
+  margin-bottom: 4px; }
 
 .weather__temperature {
   display: inline-block;
   line-height: 42px;
   font-size: 36px;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .weather__icon {
   display: inline-block;
   margin: 5px;
   height: 26px;
-  width: 26px;
-}
+  width: 26px; }
 
 .weather__icon-rain {
   background-image: url("../images/cloud-drizzle.png");
   background-repeat: no-repeat;
-  background-size: contain;
-}
-
-/*# sourceMappingURL=index.css.map */
+  background-size: contain; }
