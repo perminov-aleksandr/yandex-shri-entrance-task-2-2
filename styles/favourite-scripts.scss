@@ -13,33 +13,12 @@
     margin-bottom: 20px;    
 }
 
-.favourite-scripts__header__paging {
-    float: right;
-    padding-top: 5px;
-}
-
-.favourite-scripts__header__paging::after {
-    clear: both;
-}
-
-.favourite-scripts__header__paging__btn {
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-
-.favourite-scripts__header__paging__btn-prev {    
-    background-image: url('../images/Icons/arrow-left.svg');
-}
-
-.favourite-scripts__header__paging__btn-next {    
-    background-image: url('../images/Icons/arrow-left.svg');
-    transform: scaleX(-1);    
-}
-
 .favourite-scripts__content .card:nth-child(3n) {
     margin-right: 0;
 }
+
+.favourite-scripts__content .card {
+    float: left;
+}
+
 

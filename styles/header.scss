@@ -1,20 +1,13 @@
 @import 'variables';
 
-$border-color: #F0F0F0;
-
 .header {
     box-sizing: border-box;
     display: block;
-    width: 100%;
+    width: $page-width;
     height: $header-height;
-    padding: 0 40px;
-
-    background-color: $background-color;
-    border-bottom: 1px solid $border-color;
-    position: fixed;
-    top: 0;        
-
-    //line-height: $header-height;    
+    padding: 0 $page-padding;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header:before {

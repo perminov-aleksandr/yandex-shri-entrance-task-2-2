@@ -17,10 +17,35 @@ html, body {
     font-size: 14px;
 }
 
+.page__header {    
+    background-color: $background-color;
+    border-bottom: 1px solid $border-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.page__footer {
+    width: 100%;
+    background-color: $background-color;
+}
+
 .page__content {
-    width: 1366px;
-    padding-top: $header-height;
+    position: relative;
+    z-index: 0;
+    width: $page-width;
+    padding-top: $header-height + 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 0;
     display: block;
     box-sizing: border-box;
-    margin: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide, 
+.swiper-wrapper {    
+    height: auto;
 }

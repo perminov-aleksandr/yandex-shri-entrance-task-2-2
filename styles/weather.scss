@@ -20,13 +20,12 @@
 
 .weather__icon {
     display: inline-block;
-    margin: 5px;    
     height: 26px;
     width: 26px;
 }
 
 .weather__icon-rain {
-    background-image: url('../images/cloud-drizzle.png');
+    background-image: url('../images/cloud-drizzle.svg');
     background-repeat: no-repeat;
     background-size: contain;
 }

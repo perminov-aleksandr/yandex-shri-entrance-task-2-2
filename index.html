@@ -2,22 +2,25 @@
 
 <head>
     <title>Яндекс.Дом</title>
-    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">    
 </head>
 
 <body>
     <div class="page">
-        <div class="header">
-            <div class="header__logo">
-                <a href="#" class="header__logo__link">
-                    <img class="header__logo__img" src="images/yandex_home_logo.svg" />
-                </a>
+        <div class="page__header">
+            <div class="header">
+                <div class="header__logo">
+                    <a href="#" class="header__logo__link">
+                        <img class="header__logo__img" src="images/yandex_home_logo.svg" />
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <a href="#" class="header__menu__item header__menu__item_active">Сводка</a>
+                    <a href="#" class="header__menu__item">Устройства</a>
+                    <a href="#" class="header__menu__item">Сценарии</a>
+                </nav>
             </div>
-            <nav class="header__menu">
-                <a href="#" class="header__menu__item header__menu__item_active">Сводка</a>
-                <a href="#" class="header__menu__item">Устройства</a>
-                <a href="#" class="header__menu__item">Сценарии</a>
-            </nav>
         </div>
         <div class="page__content">
             <div class="summary">
@@ -48,7 +51,7 @@
                                 <span class="weather__temperature">
                                     +19
                                 </span>
-                                <span class="weather__icon weather__icon_rain"></span>
+                                <span class="weather__icon weather__icon-rain"></span>
                             </div>
                         </div>
                     </div>
@@ -83,9 +86,9 @@
             <div class="favourite-scripts">
                 <div class="favourite-scripts__header">
                     Избранные сценарии
-                    <div class="favourite-scripts__header__paging">
-                        <span class="favourite-scripts__header__paging__btn favourite-scripts__header__paging__btn-prev">                            
-                        </span><span class="favourite-scripts__header__paging__btn favourite-scripts__header__paging__btn-next"></span>
+                    <div class="paging">
+                        <span class="paging__btn paging__btn-prev">
+                        </span><span class="paging__btn paging__btn-next"></span>
                     </div>
                 </div>
                 <div class="favourite-scripts__content">
@@ -98,7 +101,8 @@
                                 Выключить весь свет в доме и во дворе
                             </div>
                         </div>
-                    </div><div class="card">
+                    </div>
+                    <div class="card">
                         <div class="card__icon card__icon_clock">
 
                         </div>
@@ -107,7 +111,8 @@
                                 Я ухожу
                             </div>
                         </div>
-                    </div><div class="card">
+                    </div>
+                    <div class="card">
                         <div class="card__icon card__icon_light">
 
                         </div>
@@ -116,7 +121,8 @@
                                 Включить свет в коридоре
                             </div>
                         </div>
-                    </div><div class="card">
+                    </div>
+                    <div class="card">
                         <div class="card__icon card__icon_temperature-active">
 
                         </div>
@@ -128,7 +134,8 @@
                                 Начнётся в 18:00
                             </div>
                         </div>
-                    </div><div class="card">
+                    </div>
+                    <div class="card">
                         <div class="card__icon card__icon_temperature">
 
                         </div>
@@ -140,7 +147,7 @@
                     </div>
                 </div>
             </div>
-            <div class="favourite-devices">
+            <div class="favourite-devices swiper-container">                
                 <div class="favourite-devices__header">
                     Избранные устройства
                     <div class="favourite-devices__filters">
@@ -160,94 +167,138 @@
                             Камеры
                         </span>
                     </div>
+                    <div class="paging">
+                        <span class="paging__btn paging__btn-prev">
+                        </span><span class="paging__btn paging__btn-next"></span>
+                    </div>
                 </div>
-                <div class="favourite-devices__content">
-                    <div class="card">
-                        <div class="card__icon card__icon_light-active"></div>
-                        <div class="card__info">
-                            <div class="card__name">
-                                Xiaomi Yeelight LED Smart Bulb
-                            </div>
-                            <div class="card__description">
-                                Включено
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon card__icon_light"></div>
-                        <div class="card__info">
-                            <div class="card__name">
-                                D-Link Omna 180 Cam
-                            </div>
-                            <div class="card__description">
-                                Включится в 17:00
+                <div class="swiper-wrapper">                    
+                    <div class="favourite-devices__content swiper-slide">
+                        <div class="card">
+                            <div class="card__icon card__icon_light-active"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Xiaomi Yeelight LED Smart Bulb
+                                </div>
+                                <div class="card__description">
+                                    Включено
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon card__icon_temperature"></div>
-                        <div class="card__info">
-                            <div class="card__name">
-                                Elgato Eve Degree Connected
-                            </div>
-                            <div class="card__description">
-                                Выключено до 17:00
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon card__icon_light"></div>
-                        <div class="card__info">
-                            <div class="card__name">
-                                LIFX Mini Day &amp; Dusk A60 E27
-                            </div>
-                            <div class="card__description">
-                                Включится в 17:00
+                        <div class="card">
+                            <div class="card__icon card__icon_light"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    D-Link Omna 180 Cam
+                                </div>
+                                <div class="card__description">
+                                    Включится в 17:00
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon card__icon_light-active"></div>
-                        <div class="card__info">
-                            <div class="card__name">
-                                Xiaomi Mi Air Purifier 2S
-                            </div>
-                            <div class="card__description">
-                                Включено
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon card__icon_light"></div>
-                        <div class="card__info">
-                            <div class="card__name">
-                                Philips Zhirui
-                            </div>
-                            <div class="card__description">
-                                Выключено
+                        <div class="card">
+                            <div class="card__icon card__icon_temperature"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Elgato Eve Degree Connected
+                                </div>
+                                <div class="card__description">
+                                    Выключено до 17:00
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon card__icon_light-active"></div>
-                        <div class="card__info">
-                            <div class="card__name">
-                                Xiaomi Mi Air Purifier 2S
+                        <div class="card">
+                            <div class="card__icon card__icon_light"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    LIFX Mini Day &amp; Dusk A60 E27
+                                </div>
+                                <div class="card__description">
+                                    Включится в 17:00
+                                </div>
                             </div>
-                            <div class="card__description">
-                                Включено
+                        </div>
+                        <div class="card">
+                            <div class="card__icon card__icon_light-active"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Xiaomi Mi Air Purifier 2S
+                                </div>
+                                <div class="card__description">
+                                    Включено
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__icon card__icon_light"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Philips Zhirui
+                                </div>
+                                <div class="card__description">
+                                    Выключено
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__icon card__icon_light-active"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Xiaomi Mi Air Purifier 2S
+                                </div>
+                                <div class="card__description">
+                                    Включено
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="favourite-devices__content swiper-slide">
+                        <div class="card">
+                            <div class="card__icon card__icon_light"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Philips Zhirui
+                                </div>
+                                <div class="card__description">
+                                    Выключено
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__icon card__icon_light-active"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Xiaomi Mi Air Purifier 2S
+                                </div>
+                                <div class="card__description">
+                                    Включено
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <a href="#" class="footer__link">Помощь</a>
-            <a href="#" class="footer__link">Обратная связь</a>
-            <a href="#" class="footer__link">Разработчикам</a>
-            <a href="#" class="footer__link">Условия использования</a>
+        <div class="page__footer">
+            <div class="footer">
+                <a href="#" class="footer__link">Помощь</a>
+                <a href="#" class="footer__link">Обратная связь</a>
+                <a href="#" class="footer__link">Разработчикам</a>
+                <a href="#" class="footer__link">Условия использования</a>
+                <span class="footer__link footer__link_right">
+                    &copy; 2001–2017 ООО «Яндекс»
+                </span>
+            </div>
         </div>
     </div>
 </body>
+<script src="node_modules/swiper/dist/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.paging__btn-next',
+        prevEl: '.paging__btn-prev',
+      },
+    });
+</script>
 </html>
