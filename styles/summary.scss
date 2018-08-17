@@ -1,9 +1,12 @@
+@import 'variables';
+
 .summary {
-    box-sizing: border-box;
-    display: inline-block;
+    float:left;
+    box-sizing: content-box;    
     width: 630px;
-    padding-right: 26px;
-    padding-bottom: 10px;
+    padding-right: 16px;    
+    padding-left: 10px;
+    padding-bottom: 5px;    
 }
 
 .summary__header {    

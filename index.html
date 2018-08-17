@@ -9,7 +9,7 @@
 <body>
     <div class="page">
         <div class="page__header">
-            <div class="header">
+            <div class="header content">
                 <div class="header__logo">
                     <a href="#" class="header__logo__link">
                         <img class="header__logo__img" src="images/yandex_home_logo.svg" />
@@ -22,159 +22,176 @@
                 </nav>
             </div>
         </div>
-        <div class="page__content">
-            <div class="summary">
-                <div class="summary__header">
-                    Главное
-                </div>
-                <div class="summary__content">
-                    <div class="summary__content__info">
-                        <div class="summary__content__info__header">
-                            Привет, Геннадий!
-                        </div>
-                        <div class="summary__content__info__subheader">
-                            Двери и окна закрыты, сигнализация включена.
-                        </div>
-                        <div class="summary__content__info__weather-list">
-                            <div class="weather">
-                                <span class="weather__place">
-                                    Дома
-                                </span>
-                                <span class="weather__temperature">
-                                    +23
-                                </span>
+        <div class="page__body">
+            <div class="content">
+                <div class="summary">
+                    <div class="summary__header">
+                        Главное
+                    </div>
+                    <div class="summary__content">
+                        <div class="summary__content__info">
+                            <div class="summary__content__info__header">
+                                Привет, Геннадий!
                             </div>
-                            <div class="weather">
-                                <span class="weather__place">
-                                    За окном
-                                </span>
-                                <span class="weather__temperature">
-                                    +19
-                                </span>
-                                <span class="weather__icon weather__icon-rain"></span>
+                            <div class="summary__content__info__subheader">
+                                Двери и окна закрыты, сигнализация включена.
+                            </div>
+                            <div class="summary__content__info__weather-list">
+                                <div class="weather">
+                                    <span class="weather__place">
+                                        Дома
+                                    </span>
+                                    <span class="weather__temperature">
+                                        +23
+                                    </span>
+                                </div>
+                                <div class="weather">
+                                    <span class="weather__place">
+                                        За окном
+                                    </span>
+                                    <span class="weather__temperature">
+                                        +19
+                                    </span>
+                                    <span class="weather__icon weather__icon-rain"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="summary__content__queue">
+                            <div class="summary__content__queue__item card">
+                                <div class="card__icon card__icon_temperature">
+                                </div>
+                                <div class="card__info">
+                                    <div class="card__name">
+                                        Philips Cooler
+                                    </div>
+                                    <div class="card__description">
+                                        Начнет охлаждать в 16:30
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary__content__queue__item card">
+                                <div class="card__icon card__icon_light">
+                                </div>
+                                <div class="card__info">
+                                    <div class="card__name">
+                                        Xiaomi Yeelight LED Smart Bulb
+                                    </div>
+                                    <div class="card__description">
+                                        Включится в 17:00
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="summary__content__queue">
-                        <div class="summary__content__queue__item card">
-                            <div class="card__icon card__icon_temperature">
-                            </div>
+                </div>
+                <div class="favourite-scripts swiper-container">
+                    <div class="favourite-scripts__header">
+                        Избранные сценарии
+                        <div class="paging">
+                            <span class="paging__btn paging__btn-prev">
+                            </span><span class="paging__btn paging__btn-next"></span>
+                        </div>
+                    </div>                    
+                    <div class="favourite-scripts__content swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <div class="card__icon card__icon_light"></div>
                             <div class="card__info">
                                 <div class="card__name">
-                                    Philips Cooler
-                                </div>
-                                <div class="card__description">
-                                    Начнет охлаждать в 16:30
+                                    Выключить весь свет в доме и во дворе
                                 </div>
                             </div>
                         </div>
-                        <div class="summary__content__queue__item card">
-                            <div class="card__icon card__icon_light">
-                            </div>
+                        <div class="card swiper-slide">
+                            <div class="card__icon card__icon_clock"></div>
                             <div class="card__info">
                                 <div class="card__name">
-                                    Xiaomi Yeelight LED Smart Bulb
+                                    Я ухожу
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="card__icon card__icon_light"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Включить свет в коридоре
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="card__icon card__icon_temperature-active"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Набрать горячую ванну
                                 </div>
                                 <div class="card__description">
-                                    Включится в 17:00
+                                    Начнётся в 18:00
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="card swiper-slide">
+                            <div class="card__icon card__icon_temperature"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Сделать пол тёплым во всей квартире
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="card__icon card__icon_light"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Выключить весь свет в доме и во дворе
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="card__icon card__icon_light"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Включить свет в коридоре
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="card__icon card__icon_temperature-active"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Набрать горячую ванну
+                                </div>
+                                <div class="card__description">
+                                    Начнётся в 18:00
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
                 </div>
-            </div>
-            <div class="favourite-scripts">
-                <div class="favourite-scripts__header">
-                    Избранные сценарии
-                    <div class="paging">
-                        <span class="paging__btn paging__btn-prev">
-                        </span><span class="paging__btn paging__btn-next"></span>
-                    </div>
-                </div>
-                <div class="favourite-scripts__content">
-                    <div class="card">
-                        <div class="card__icon card__icon_light">
-
+                <div class="favourite-devices swiper-container">                
+                    <div class="favourite-devices__header">
+                        Избранные устройства
+                        <div class="favourite-devices__filters">
+                            <span class="favourite-devices__filters__item favourite-devices__filters__item_active">
+                                Все
+                            </span>
+                            <span class="favourite-devices__filters__item">
+                                Кухня
+                            </span>
+                            <span class="favourite-devices__filters__item">
+                                Зал
+                            </span>
+                            <span class="favourite-devices__filters__item">
+                                Лампочки
+                            </span>
+                            <span class="favourite-devices__filters__item">
+                                Камеры
+                            </span>
                         </div>
-                        <div class="card__info">
-                            <div class="card__name">
-                                Выключить весь свет в доме и во дворе
-                            </div>
+                        <div class="paging">
+                            <span class="paging__btn paging__btn-prev">
+                            </span><span class="paging__btn paging__btn-next"></span>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon card__icon_clock">
-
-                        </div>
-                        <div class="card__info">
-                            <div class="card__name">
-                                Я ухожу
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon card__icon_light">
-
-                        </div>
-                        <div class="card__info">
-                            <div class="card__name">
-                                Включить свет в коридоре
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon card__icon_temperature-active">
-
-                        </div>
-                        <div class="card__info">
-                            <div class="card__name">
-                                Набрать горячую ванну
-                            </div>
-                            <div class="card__description">
-                                Начнётся в 18:00
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon card__icon_temperature">
-
-                        </div>
-                        <div class="card__info">
-                            <div class="card__name">
-                                Сделать пол тёплым во всей квартире
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="favourite-devices swiper-container">                
-                <div class="favourite-devices__header">
-                    Избранные устройства
-                    <div class="favourite-devices__filters">
-                        <span class="favourite-devices__filters__item favourite-devices__filters__item_active">
-                            Все
-                        </span>
-                        <span class="favourite-devices__filters__item">
-                            Кухня
-                        </span>
-                        <span class="favourite-devices__filters__item">
-                            Зал
-                        </span>
-                        <span class="favourite-devices__filters__item">
-                            Лампочки
-                        </span>
-                        <span class="favourite-devices__filters__item">
-                            Камеры
-                        </span>
-                    </div>
-                    <div class="paging">
-                        <span class="paging__btn paging__btn-prev">
-                        </span><span class="paging__btn paging__btn-next"></span>
-                    </div>
-                </div>
-                <div class="swiper-wrapper">                    
-                    <div class="favourite-devices__content swiper-slide">
-                        <div class="card">
+                    </div>   
+                    <div class="favourite-devices__content swiper-wrapper">
+                        <div class="card swiper-slide">
                             <div class="card__icon card__icon_light-active"></div>
                             <div class="card__info">
                                 <div class="card__name">
@@ -185,7 +202,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card swiper-slide">
                             <div class="card__icon card__icon_light"></div>
                             <div class="card__info">
                                 <div class="card__name">
@@ -196,7 +213,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card swiper-slide">
                             <div class="card__icon card__icon_temperature"></div>
                             <div class="card__info">
                                 <div class="card__name">
@@ -207,7 +224,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card swiper-slide">
                             <div class="card__icon card__icon_light"></div>
                             <div class="card__info">
                                 <div class="card__name">
@@ -218,7 +235,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card swiper-slide">
                             <div class="card__icon card__icon_light-active"></div>
                             <div class="card__info">
                                 <div class="card__name">
@@ -229,7 +246,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card swiper-slide">
                             <div class="card__icon card__icon_light"></div>
                             <div class="card__info">
                                 <div class="card__name">
@@ -240,7 +257,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card swiper-slide">
                             <div class="card__icon card__icon_light-active"></div>
                             <div class="card__info">
                                 <div class="card__name">
@@ -251,9 +268,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>                    
-                    <div class="favourite-devices__content swiper-slide">
-                        <div class="card">
+                        <div class="card swiper-slide">
                             <div class="card__icon card__icon_light"></div>
                             <div class="card__info">
                                 <div class="card__name">
@@ -264,7 +279,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card swiper-slide">
                             <div class="card__icon card__icon_light-active"></div>
                             <div class="card__info">
                                 <div class="card__name">
@@ -275,12 +290,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>    
                 </div>
             </div>
         </div>
-        <div class="page__footer">
-            <div class="footer">
+        <div class="page__footer ">
+            <div class="footer content">
                 <a href="#" class="footer__link">Помощь</a>
                 <a href="#" class="footer__link">Обратная связь</a>
                 <a href="#" class="footer__link">Разработчикам</a>
@@ -292,13 +307,5 @@
         </div>
     </div>
 </body>
-<script src="node_modules/swiper/dist/js/swiper.min.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-      navigation: {
-        nextEl: '.paging__btn-next',
-        prevEl: '.paging__btn-prev',
-      },
-    });
-</script>
+<script src="index.js"></script>
 </html>

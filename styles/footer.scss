@@ -2,14 +2,10 @@
 
 $footer-height: 64px;
 
-.footer {    
-    box-sizing: border-box;    
-    width: $page-width;
-    height: $footer-height;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: $page-padding;
-    padding-right: $page-padding;
+.footer {        
+    height: $footer-height;    
+    padding-left: $content-padding + 10px;
+    padding-right: $content-padding + 10px;
 }
 
 .footer__link {

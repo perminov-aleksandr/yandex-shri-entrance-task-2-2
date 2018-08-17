@@ -1,13 +1,10 @@
 @import 'variables';
 
-.header {
-    box-sizing: border-box;
-    display: block;
-    width: $page-width;
+.header {    
+    display: block;    
     height: $header-height;
-    padding: 0 $page-padding;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: $content-padding + 10px;
+    padding-right: $content-padding + 10px;
 }
 
 .header:before {
@@ -32,7 +29,6 @@
 
 .header__menu {
     display: inline-block;
-    //line-height: $header-height;
     padding: 0 26px;
 }
 

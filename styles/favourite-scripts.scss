@@ -1,9 +1,16 @@
 .favourite-scripts {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 630px;
-    //padding: 5px;
+    float: left;
+    box-sizing: content-box;    
+    width: 640px;
+    padding-left: 10px;
+    //padding-right: 10px;
     vertical-align: top;    
+}
+
+
+
+.favourite-scripts::after {
+    clear: both;
 }
 
 .favourite-scripts__header {
@@ -14,7 +21,7 @@
 }
 
 .favourite-scripts__content .card:nth-child(3n) {
-    margin-right: 0;
+    margin-right: 10px;
 }
 
 .favourite-scripts__content .card {
