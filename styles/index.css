@@ -8,12 +8,13 @@ html, body {
   display: block;
   height: 100%;
   width: 100%;
-  background-color: #fff;
+  min-width: 375px;
+  background-color: #FFF;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px; }
 
 .page__header {
-  background-color: #fff;
+  background-color: #FFF;
   border-bottom: 1px solid #F0F0F0;
   position: fixed;
   top: 0;
@@ -22,7 +23,7 @@ html, body {
 
 .page__footer {
   width: 100%;
-  background-color: #fff; }
+  background-color: #FFF; }
 
 .page__body {
   display: block;
@@ -72,7 +73,7 @@ html, body {
 
 .header__menu__item {
   font-size: 16px;
-  color: #333333;
+  color: #333;
   text-decoration: none;
   font-weight: bold;
   opacity: 0.6;
@@ -263,7 +264,7 @@ html, body {
   height: 30px;
   border-radius: 20px;
   background-color: #F7F7F7;
-  color: #000;
+  color: #333;
   font-size: 13px;
   line-height: 15px;
   padding: 7px 11px 8px 15px;
@@ -278,6 +279,9 @@ html, body {
   box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
   cursor: pointer; }
 
+.favourite-devices__filters__active {
+  display: none; }
+
 .weather {
   display: inline-block;
   margin-right: 18px; }
@@ -289,16 +293,20 @@ html, body {
   font-size: 14px;
   margin-bottom: 4px; }
 
-.weather__temperature {
-  display: inline-block;
+.weather__temperature__value {
+  display: block;
   line-height: 42px;
   font-size: 36px;
-  font-weight: bold; }
+  font-weight: bold;
+  float: left; }
 
 .weather__icon {
-  display: inline-block;
+  display: block;
+  float: left;
   height: 26px;
-  width: 26px; }
+  width: 26px;
+  margin-top: 8px;
+  margin-left: 5px; }
 
 .weather__icon-rain {
   background-image: url("../images/cloud-drizzle.svg");
@@ -327,30 +335,59 @@ html, body {
   transform: scaleX(-1); }
 
 @media (max-width: 1366px) {
+  .page {
+    min-width: 375px; }
+  .page__header {
+    border-bottom: none; }
+  .page__body {
+    padding-top: 64px; }
   .content {
-    width: 100%; }
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0; }
+  .paging {
+    display: none; }
   .summary {
-    width: unset; }
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px; }
+  .summary__header {
+    display: none; }
   .summary__content {
-    min-height: 250px; }
+    padding: 0;
+    min-height: unset; }
   .summary__content__info {
     display: block;
-    width: unset; }
+    width: unset;
+    padding: 20px; }
+  .summary__content__info__header {
+    font-size: 18px;
+    line-height: 21px; }
+  .summary__content__info__subheader {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 15px; }
   .summary__content__queue {
     display: block;
-    width: unset;
+    width: 100%;
     overflow: hidden;
-    height: 130px;
-    white-space: nowrap; }
+    height: 140px;
+    white-space: nowrap;
+    padding: 20px;
+    padding-top: 0;
+    box-sizing: border-box;
+    float: none; }
   .summary__content__queue > * {
     white-space: normal; }
-  .favourite-devices {
-    width: 100%; }
   .favourite-scripts {
+    box-sizing: border-box;
     width: 100%;
-    padding-top: 20px; }
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px; }
   .favourite-scripts__content {
-    height: 130px;
     white-space: nowrap; }
   .favourite-scripts__content > * {
     white-space: normal; }
@@ -358,13 +395,26 @@ html, body {
     float: none; }
   .favourite-scripts__content .card:nth-child(3n) {
     margin-right: 15px; }
+  .favourite-scripts__content .card:last-child {
+    margin-right: 0; }
+  .favourite-devices {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px; }
+  .favourite-devices__header {
+    padding-top: 10px; }
+  .favourite-devices__content .card:last-child {
+    margin-right: 0; }
   .header {
-    padding: 0; }
+    padding: 0;
+    height: 64px; }
   .header__logo {
     padding-left: 15px; }
   .header__menu {
     display: none;
-    background-color: #fff;
+    background-color: #FFF;
     padding: 0;
     border: 1px solid #F0F0F0; }
   .header:hover .header__menu {
@@ -379,25 +429,71 @@ html, body {
     background-color: #F0F0F0; }
   .header__menu__item:last-child {
     border-bottom: none; }
+  .icon {
+    border: solid #333;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    margin: 0 2px 2px 0; }
+  .icon-down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg); }
   .favourite-devices__filters {
+    display: none; }
+  .favourite-devices__filters__active {
+    display: block;
     float: right;
-    margin-top: -5px; }
-  .favourite-devices__filters::after {
-    clear: both; }
-  .favourite-devices__filters__item {
+    height: 30px;
+    border-radius: 20px;
+    background-color: #FFD93E;
+    line-height: 15px;
+    padding: 7px 11px 12px 15px;
+    font-size: 13px;
+    font-weight: bold;
     box-sizing: border-box;
-    margin: 0;
-    padding-left: 5px;
-    padding-right: 5px;
+    z-index: 0; }
+    .favourite-devices__filters__active:hover {
+      cursor: pointer; }
+  .favourite-devices__filters {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    z-index: 10;
+    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
+    padding: 0;
+    border-radius: 20px; }
+  .favourite-devices__filters__active:hover + .favourite-devices__filters,
+  .favourite-devices__filters_shown {
+    display: block; }
+  .favourite-devices__filters__item {
+    display: block;
     border-radius: 0;
-    float: left; }
+    margin-right: 0;
+    height: unset;
+    text-align: center; }
   .favourite-devices__filters__item:first-child {
-    padding-left: 10px;
     border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px; }
+    border-top-right-radius: 20px; }
   .favourite-devices__filters__item:last-child {
-    padding-right: 10px;
-    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px; }
-  .paging {
-    display: none; } }
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .footer__link {
+    display: block;
+    padding-left: 0; }
+  .footer__link_right {
+    float: left; }
+  .weather__place {
+    line-height: 14px;
+    font-size: 12px;
+    margin-bottom: 5px; }
+  .weather__temperature__value {
+    line-height: 28px;
+    font-size: 24px; }
+  .weather__icon {
+    height: 22px;
+    width: 22px;
+    margin-top: 4px;
+    margin-left: 4px; } }

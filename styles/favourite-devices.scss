@@ -28,7 +28,7 @@
     height: 30px;
     border-radius: 20px;
     background-color: #F7F7F7;
-    color: #000;
+    color: $font-color;
     font-size: 13px;
     line-height: 15px;
     padding: 7px 11px 8px 15px;
@@ -37,11 +37,15 @@
 }
 
 .favourite-devices__filters__item_active {
-    background-color: #FFD93E;
+    background-color: $accent-color;
 }
 
 .favourite-devices__filters__item:hover:not(.favourite-devices__filters__item_active) {
     background: #ffffff;
     box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);    
     cursor: pointer;
+}
+
+.favourite-devices__filters__active {
+    display: none;
 }

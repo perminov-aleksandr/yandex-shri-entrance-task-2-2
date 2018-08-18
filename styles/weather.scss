@@ -11,17 +11,21 @@
     margin-bottom: 4px;
 }
 
-.weather__temperature {
-    display: inline-block;
+.weather__temperature__value {
+    display: block;    
     line-height: 42px;
     font-size: 36px;
     font-weight: bold;
+    float: left;
 }
 
-.weather__icon {
-    display: inline-block;
+.weather__icon {    
+    display: block;
+    float: left;
     height: 26px;
     width: 26px;
+    margin-top: 8px;
+    margin-left: 5px;
 }
 
 .weather__icon-rain {

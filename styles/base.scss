@@ -11,6 +11,7 @@ html, body {
     display: block;
     height: 100%;
     width: 100%;
+    min-width: 375px;
     background-color: $background-color;
 
     font-family: Arial, Helvetica, sans-serif;

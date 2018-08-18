@@ -2,6 +2,7 @@
 
 <head>
     <title>Яндекс.Дом</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="node_modules/swiper/dist/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="styles/index.css">    
 </head>
@@ -42,7 +43,7 @@
                                         Дома
                                     </span>
                                     <span class="weather__temperature">
-                                        +23
+                                        <span class="weather__temperature__value">+23</span>
                                     </span>
                                 </div>
                                 <div class="weather">
@@ -50,9 +51,9 @@
                                         За окном
                                     </span>
                                     <span class="weather__temperature">
-                                        +19
+                                        <span class="weather__temperature__value">+19</span>
+                                        <span class="weather__icon weather__icon-rain"></span>
                                     </span>
-                                    <span class="weather__icon weather__icon-rain"></span>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +169,11 @@
                 <div class="favourite-devices swiper-container">                
                     <div class="favourite-devices__header">
                         Избранные устройства
-                        <div class="favourite-devices__filters">
+                        <div class="favourite-devices__filters__active">
+                            Все
+                            <i class="icon icon-down"></i>
+                        </div>
+                        <div class="favourite-devices__filters favourite-devices__filters_shown">
                             <span class="favourite-devices__filters__item favourite-devices__filters__item_active">
                                 Все
                             </span>
@@ -294,7 +299,7 @@
                 </div>
             </div>
         </div>
-        <div class="page__footer ">
+        <footer class="page__footer">
             <div class="footer content">
                 <a href="#" class="footer__link">Помощь</a>
                 <a href="#" class="footer__link">Обратная связь</a>
