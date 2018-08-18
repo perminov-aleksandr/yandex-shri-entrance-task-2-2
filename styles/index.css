@@ -84,6 +84,9 @@ html, body {
 .header__menu__item_active {
   opacity: 1; }
 
+.header__menu-icon {
+  display: none; }
+
 .footer {
   height: 64px;
   padding-left: 40px;
@@ -411,7 +414,21 @@ html, body {
     padding: 0;
     height: 64px; }
   .header__logo {
-    padding-left: 15px; }
+    margin-left: 20px; }
+  .header__logo__img {
+    height: 37px; }
+  .header__menu-icon {
+    display: block;
+    float: right;
+    background-image: url("../images/icon_list_m@1x.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-top: 24px;
+    margin-right: 20px; }
+  .header__menu-icon:after {
+    clear: both; }
   .header__menu {
     display: none;
     background-color: #FFF;
