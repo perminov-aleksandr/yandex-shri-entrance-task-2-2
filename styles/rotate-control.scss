@@ -1,0 +1,70 @@
+.rotate-control {
+    display: block;
+    width: 221px;
+    height: 221px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('../images/Oval@1x.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 22px;
+    box-sizing: border-box;
+}
+
+.rotate-control__value {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: $box-shadow;
+    font-size: 66px;
+    line-height: 76px;
+    font-weight: bold;    
+    text-align: center;
+    padding-top: 51px;
+    padding-left: 34px;
+    padding-right: 32px;
+}
+
+x-knobjs-knob {
+    display: block;
+    width: 221px;
+    height: 221px;  
+    margin: auto;  
+    position: relative;
+    //padding: 22px;
+    box-sizing: border-box;
+}
+
+.x-knobjs-knob__value {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 66px;
+    line-height: 76px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 69px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.knobjs-bg {    
+    fill: rgba(255,255,255,0);
+}
+
+.knobjs-arc {
+    fill: $accent-color;
+    // stroke: $accent-color;
+    // stroke-width: 0.25;
+    // stroke-dasharray: .025 .075;
+}
+
+.knobjs-arcbg {
+    fill: white;
+    mask: none;    
+}

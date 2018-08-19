@@ -1,6 +1,7 @@
 import Swiper from 'swiper';
+import MicroModal from 'micromodal';
 
-var scriptsSwiper = new Swiper('.favourite-scripts', {
+const scriptsSwiper = new Swiper('.favourite-scripts', {
     slidesPerView: 'auto', 
     // slidesPerView: 3, 
     // slidesPerColumn: 2,
@@ -11,7 +12,7 @@ var scriptsSwiper = new Swiper('.favourite-scripts', {
     },
 });
 
-var devicesSwiper = new Swiper('.favourite-devices', {
+const devicesSwiper = new Swiper('.favourite-devices', {
     slidesPerView: 'auto', 
     watchSlidesVisibility: true,   
     navigation: {
@@ -20,3 +21,4 @@ var devicesSwiper = new Swiper('.favourite-devices', {
     },
 });
 
+MicroModal.init();

@@ -5,6 +5,8 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 
 .page {
@@ -13,9 +15,6 @@ html, body {
     width: 100%;
     min-width: 375px;
     background-color: $background-color;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
 }
 
 .page__header {    

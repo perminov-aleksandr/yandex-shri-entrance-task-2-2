@@ -1,0 +1,47 @@
+.device-card {
+    
+}
+
+.device-card__header {
+    display: block;    
+    overflow: auto;
+}
+
+.device-card__header__title {        
+    float: left;    
+}
+
+.device-card__name {
+    font-size: 27px;
+    line-height: 31px;
+    font-weight: bold;
+}
+
+.device-card__status {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.device-card__header__info {
+    float: right;
+}
+
+.device-card__header__info__value {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;    
+    float: left;
+}
+
+.device-card__header__info__icon  {
+    width: 42px;
+    height: 42px;
+    float: left;
+}
+
+.device-card__header__info__icon-temperature {
+    background-image: url('../images/icon_temperature_2.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
