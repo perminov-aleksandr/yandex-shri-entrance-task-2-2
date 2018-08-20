@@ -19,7 +19,8 @@ $slider-icon-margin: 12px;
     width: $slider-size - 2*$slider-icon-margin;
     height: $slider-size - 2*$slider-icon-margin;
     background-size: contain;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;  
+    pointer-events: none;  
 }
 
 .slider-control__icon_start {    
@@ -60,13 +61,15 @@ $slider-border-width: 4px;
 }
 
 .slider-control_horizontal .slider-control__icon_start {
-    float: left;    
-    //margin-left: 20px;
+    position: absolute;
+    left: 4px;
+    top: 0;
 }
 
 .slider-control_horizontal .slider-control__icon_end {
-    float: right;
-    //margin-right: 20px;
+    position: absolute;
+    right: 4px;
+    top: 0;
 }
 
 .slider-control_horizontal .slider-control__slider {    
@@ -85,13 +88,13 @@ $slider-border-width: 4px;
 .slider-control_vertical .slider-control__icon_end {
     position: absolute;
     left: 0;
-    top: 0;    
+    top: 4px;    
 }
 
 .slider-control_vertical .slider-control__icon_start {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 4px;
 }
 
 .slider-control_vertical .slider-control__slider {    

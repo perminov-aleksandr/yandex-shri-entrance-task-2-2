@@ -2,6 +2,13 @@ const ORIENTATION_HORIZONTAL = "horizontal";
 const ORIENTATION_VERTICAL = "vertical";
 
 export default {
+    onOrientationChange(newOrientation) {
+        this.slider.style[this.sliderPositionProperty] = "";
+        this.orientation = newOrientation;
+        this.updateClass();
+        this.setSliderPosition(this.getCurrentValue());
+    },
+
     calculateOrientation() {
         return window.matchMedia('(max-width: 767px)').matches ? ORIENTATION_VERTICAL : ORIENTATION_HORIZONTAL;
     },
@@ -13,41 +20,73 @@ export default {
 
     init() {
         this.control = document.querySelector(".slider-control");
-        this.slider = document.querySelector(".slider-control .slider-control__slider");
-        this.currentPosition = this.control.getAttribute("data-value");
+        this.slider = document.querySelector(".slider-control .slider-control__slider");        
 
-        this.orientation = this.calculateOrientation();
-        this.updateClass();
+        this.onOrientationChange(this.calculateOrientation());        
         window.addEventListener('resize', () => {
-            this.orientation = this.calculateOrientation();
-            this.updateClass();
+            const newOrientation = this.calculateOrientation();
+            if (newOrientation !== this.orientation)
+                this.onOrientationChange(newOrientation);
         });
 
-        this.setSliderPosition(this.currentPosition);
+        this.setSliderPosition(this.getCurrentValue());
 
-        const onMouseListenerLamda = (ev) => {            
+        const onMoveListener = (ev) => {
             if (this.dragging)
-                this.onMouseMove(ev);
+                this.onMouseMove(ev.type === 'touchmove' ? ev.touches[0] : ev);
         };
-        this.slider.addEventListener('mousedown', (ev) => {            
-            console.log('Mouse DOWN');
+        const onDownListener = (ev) => {            
             this.dragging = true;
-            this.setMousePosition(ev);            
-            window.addEventListener('mousemove', onMouseListenerLamda);
-        });        
-        window.addEventListener('mouseup', (ev) => {            
+            if (ev.type === 'touchstart') {
+                this.setMousePosition(ev.touches[0]);
+                window.addEventListener('touchmove', onMoveListener);
+            } else {
+                this.setMousePosition(ev);
+                window.addEventListener('mousemove', onMoveListener);
+            }
+        };
+        const onUpListener = (ev) => {
             this.dragging = false;
-            window.removeEventListener('mousemove', onMouseListenerLamda);
-            console.log('Mouse UP');
-        });
+            if (ev.type === 'touchend')
+                window.removeEventListener('touchmove', onMoveListener);            
+            else
+                window.removeEventListener('mousemove', onMoveListener);            
+        };
+
+        this.slider.addEventListener('touchstart', onDownListener);
+        this.slider.addEventListener('mousedown', onDownListener);
+        window.addEventListener('touchend', onUpListener);
+        window.addEventListener('mouseup', onUpListener);
+    },
+
+    getCurrentValue() {
+        const currentValue = this.control.getAttribute('data-value');
+        this.currentValue = parseInt(currentValue);
+        return this.currentValue;
+    },
+
+    setCurrentValue(position) {
+        if (position > 100)
+            position = 100;
+
+        this.currentValue = position;
+        this.control.setAttribute('data-value', Math.round(position));
     },
 
     setSliderPosition(percent) {
+        this.setCurrentValue(percent);
+
+        const maxSliderPositionPercent = this.maxSliderPercent;
+        if (percent < 0)
+            percent = 0;
+        if (percent > maxSliderPositionPercent)
+            percent = maxSliderPositionPercent;
+        
         this.slider.style[this.sliderPositionProperty] = `${percent}%`;
     },
 
     setMousePosition(ev) {
-        this.mousePosition = {x: ev.clientX, y: ev.clientY};
+        this.mousePosition = {x: ev.screenX, y: ev.screenY};
     },
 
     get sliderPositionProperty() {
@@ -63,7 +102,7 @@ export default {
     },
 
     calculateNewSliderPosition(positionDiff) {
-        return parseFloat(this.slider.style[this.sliderPositionProperty]) + 100.0 * positionDiff[this.coordinate] / (this.control[this.dimension]);
+        return this.currentValue + 100.0 * positionDiff[this.coordinate] / (this.control[this.dimension]);
     },
 
     get maxSliderPercent() {
@@ -71,20 +110,18 @@ export default {
     },
 
     onMouseMove(ev) {
-        const newMousePosition = {x: ev.clientX, y: ev.clientX};
+        if (ev.type === 'touchmove')
+            ev = ev.touches[0];
+        const newMousePosition = {x: ev.screenX, y: ev.screenY};
+        console.log('newPosition', newMousePosition);
+
         const positionDiff = { 
             x: newMousePosition.x - this.mousePosition.x,
             y: newMousePosition.y - this.mousePosition.y,
         };
-
+        console.log('positionDiff', positionDiff);
+        
         let newSliderPositionPercent = this.calculateNewSliderPosition(positionDiff);
-        const maxSliderPositionPercent = this.maxSliderPercent;
-
-        if (newSliderPositionPercent < 0)
-            newSliderPositionPercent = 0;
-        if (newSliderPositionPercent > maxSliderPositionPercent)
-            newSliderPositionPercent = maxSliderPositionPercent;
-
         this.setSliderPosition(newSliderPositionPercent);
         this.setMousePosition(ev);      
     }
