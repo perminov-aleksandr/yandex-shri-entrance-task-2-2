@@ -1,6 +1,28 @@
 @import 'variables';
 
-@media (max-width: $page-width) {
+//https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .content {
+        width: 100%;
+    }
+
+    .favourite-scripts {
+        width: calc(100% - 460px);    
+    }
+}
+
+@media (min-width: 1024px) and (max-width: $page-width) {
+    .content {
+        width: 100%;
+    }
+
+    .favourite-scripts {
+        width: calc(100% - 670px);
+    }
+}
+
+@media (max-width: 767px) {
     $header-height: 64px;
 
     .page {
@@ -24,56 +46,6 @@
     .paging {
         display: none;
     }
-
-    .summary {
-        box-sizing: border-box;
-        width: 100%;
-        padding-left: 20px;   
-        padding-right: 20px;  
-        padding-bottom: 10px;
-    }
-
-        .summary__header {
-            display: none;
-        }
-
-        .summary__content {
-            padding: 0;
-            min-height: unset;
-        }
-
-            .summary__content__info {
-                display: block;
-                width: unset;
-                padding: 20px;
-            }
-
-                .summary__content__info__header {
-                    font-size: 18px;
-                    line-height: 21px;
-                }
-
-                .summary__content__info__subheader {
-                    font-size: 12px;
-                    line-height: 14px;
-                    margin-bottom: 15px;
-                }
-    
-            .summary__content__queue {
-                display: block;
-                width: 100%;
-                overflow: hidden;
-                height: 140px;
-                white-space: nowrap;
-                padding: 20px;
-                padding-top: 0;
-                box-sizing: border-box;
-                float: none;
-            }
-
-                .summary__content__queue > * {
-                    white-space: normal;
-                }
 
     .favourite-scripts {
         box-sizing: border-box;
@@ -148,6 +120,9 @@
     .header__menu-icon:after {
         clear: both;
     }
+    .header__menu-icon:hover {
+        cursor: pointer;
+    }
 
     .header__menu {
         display: none;
@@ -155,8 +130,8 @@
         padding: 0;
         border: 1px solid $border-color;        
     }   
-
-    .header:hover .header__menu {
+    
+    .header__menu_shown {
         display: block;        
     }
     
@@ -199,22 +174,27 @@
         float: right;
         height: 30px;
         border-radius: 20px;
-        background-color: $accent-color;
-        line-height: 15px;
-        padding: 7px 11px (8px+4px) 15px;
-        font-size: 13px;
-        font-weight: bold; 
+        background-color: $accent-color;        
         box-sizing: border-box;
         z-index: 0;
+        padding: 4px 11px (8px+4px) 15px;
+        margin-top: -5px;
 
         &:hover { 
             cursor: pointer;
         }
     }
 
+    .favourite-devices__filters__active__name {
+        display: inline-block;
+        font-size: 13px;        
+        line-height: 15px;
+        font-weight: bolder; 
+    }
+
     .favourite-devices__filters {        
         position: absolute;
-        top: 45px;
+        top: 40px;
         right: 20px;
         z-index: 10;
         box-shadow: $box-shadow;
@@ -222,7 +202,7 @@
         border-radius: 20px;
     }
 
-    .favourite-devices__filters__active:hover + .favourite-devices__filters,
+    //.favourite-devices__filters__active:hover + .favourite-devices__filters,
     .favourite-devices__filters_shown {
         display: block;
     }    
@@ -277,4 +257,74 @@
         margin-left: 4px;
     }
     
+    //-------------------------------MODAL-----------------------------------
+    .modal-dialog {
+        margin: 0;        
+        width: unset;
+        box-sizing: border-box;
+        padding: 20px;
+        height: 100%;
+    }
+
+    $modal-buttons-height: 2*60px + 15px;
+
+    .modal-content {
+        height: calc(100% - (2*60px + 15px + 20px));
+        box-sizing: border-box;
+    }
+
+    .modal-buttons {
+        overflow: auto;
+    }
+
+    .modal-buttons__btn {
+        width: 100%;
+        margin-right:0;
+        margin-bottom:15px;
+    }
+
+    //--------------------------------DEVICE CARD -----------------------------
+    .device-card {
+        position: relative;
+    }
+
+    $device-card__name-height: 21px;
+    $device-card__status-height: 14px;
+    $device-card__status-margin: 5px;
+    $device-card__header-height: $device-card__name-height + $device-card__status-height + $device-card__status-margin;
+
+    .device-card__name {
+        font-size: 18px;
+        line-height: $device-card__name-height;
+    }
+
+    .device-card__status {
+        margin-top: 5px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .device-card__header__info {
+        display: none;
+    }
+
+    .device-card__content__control {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .device-card__control-modes {
+        white-space: nowrap;        
+    }
+
+    .device-card__control-modes > * {
+        white-space: normal;
+    }
 }
+
+
+
+
+

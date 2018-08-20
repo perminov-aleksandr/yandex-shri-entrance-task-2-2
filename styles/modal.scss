@@ -51,6 +51,10 @@
     float: left;
 }
 
+.modal-buttons__btn:hover {
+    cursor: pointer;
+}
+
 .modal-buttons__btn:last-child {
     margin-right: 0;
 }

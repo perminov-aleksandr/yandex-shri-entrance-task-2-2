@@ -38,10 +38,38 @@
     width: 42px;
     height: 42px;
     float: left;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .device-card__header__info__icon-temperature {
-    background-image: url('../images/icon_temperature_2.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-image: url('../images/icon_temperature_2.svg');    
+}
+
+.device-card__header__info__icon-light {
+    background-image: url('../images/icon_sun.svg');
+}
+
+.device-card__control-modes {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.device-card__control-mode {
+    display: inline-block;
+    background: #F2F1F0;
+    border-radius: 20px;
+    font-size: 13px;
+    line-height: 15px;
+    padding: 7px 11px 8px 15px;
+    font-weight: bold;
+}
+.device-card__control-mode:hover {
+    cursor: pointer;
+    box-shadow: $box-shadow;
+}
+
+.device-card__control-mode_active {
+    background-color: #FFD93E;
 }

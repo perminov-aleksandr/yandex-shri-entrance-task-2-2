@@ -4,7 +4,7 @@
     <title>Яндекс.Дом</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="node_modules/swiper/dist/css/swiper.min.css">
-    <link rel="stylesheet" type="text/css" href="styles/index.css">    
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
 </head>
 
 <body>
@@ -91,9 +91,10 @@
                         Избранные сценарии
                         <div class="paging">
                             <span class="paging__btn paging__btn-prev">
-                            </span><span class="paging__btn paging__btn-next"></span>
+                            </span>
+                            <span class="paging__btn paging__btn-next"></span>
                         </div>
-                    </div>                    
+                    </div>
                     <div class="favourite-scripts__content swiper-wrapper">
                         <div class="card swiper-slide">
                             <div class="card__icon card__icon_light"></div>
@@ -165,16 +166,16 @@
                                 </div>
                             </div>
                         </div>
-                    </div>   
+                    </div>
                 </div>
-                <div class="favourite-devices swiper-container">                
+                <div class="favourite-devices swiper-container">
                     <div class="favourite-devices__header">
                         Избранные устройства
                         <div class="favourite-devices__filters__active">
-                            Все
+                            <span class="favourite-devices__filters__active__name">Все</span>
                             <i class="icon icon-down"></i>
                         </div>
-                        <div class="favourite-devices__filters favourite-devices__filters_shown">
+                        <div class="favourite-devices__filters">
                             <span class="favourite-devices__filters__item favourite-devices__filters__item_active">
                                 Все
                             </span>
@@ -193,9 +194,10 @@
                         </div>
                         <div class="paging">
                             <span class="paging__btn paging__btn-prev">
-                            </span><span class="paging__btn paging__btn-next"></span>
+                            </span>
+                            <span class="paging__btn paging__btn-next"></span>
                         </div>
-                    </div>   
+                    </div>
                     <div class="favourite-devices__content swiper-wrapper">
                         <div class="card swiper-slide" data-micromodal-trigger="modal-1">
                             <div class="card__icon card__icon_light-active"></div>
@@ -208,7 +210,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card swiper-slide">
+                        <div class="card swiper-slide" data-micromodal-trigger="modal-2">
                             <div class="card__icon card__icon_light"></div>
                             <div class="card__info">
                                 <div class="card__name">
@@ -296,7 +298,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>
                 </div>
             </div>
         </div>
@@ -310,58 +312,110 @@
                     &copy; 2001–2017 ООО «Яндекс»
                 </span>
             </div>
-        </div>
+    </div>
     </div>
 
     <div id="modal-1" aria-hidden="true" class="modal">
-        <div tabindex="-1" data-micromodal-close>
-            <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal-dialog">                        
-                <div class="modal-content device-card">                    
+        <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal-dialog">
+            <div class="modal-content device-card">
+                <div class="device-card__header">
+                    <div class="device-card__header__title">
+                        <div class="device-card__name">
+                            Xiaomi Warm Floor
+                        </div>
+                        <div class="device-card__status">
+                            Включено
+                        </div>
+                    </div>
+                    <div class="device-card__header__info">
+                        <span class="device-card__header__info__value">
+                            +23
+                        </span>
+                        <span class="device-card__header__info__icon device-card__header__info__icon-temperature">
+                        </span>
+                    </div>
+                </div>
+                <div class="device-card__content">
+                    <div class="device-card__content__control">
+                        <x-knobjs-knob id="modal-1-control" value="23" min="10" max="90">
+                            <div class="x-knobjs-knob__value">+23</div>
+                        </x-knobjs-knob>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <div class="modal-buttons__btn modal-buttons__btn_apply">
+                    Применить
+                </div>
+                <div class="modal-buttons__btn" data-micromodal-close>
+                    Закрыть
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div id="modal-2" class="modal">
+            <div role="dialog" class="modal-dialog">
+                <div class="modal-content device-card">
                     <div class="device-card__header">
                         <div class="device-card__header__title">
                             <div class="device-card__name">
-                                Xiaomi Warm Floor                            
+                                Xiaomi Yeelight LED Smart Bulb
                             </div>
                             <div class="device-card__status">
-                                Включено
+                                Включится в 17:00
                             </div>
                         </div>
                         <div class="device-card__header__info">
-                            <span class="device-card__header__info__value">
-                                +23
-                            </span>
-                            <span class="device-card__header__info__icon device-card__header__info__icon-temperature">
+                            <span class="device-card__header__info__icon device-card__header__info__icon-light">
                             </span>
                         </div>
-                    </div>                    
-                    <div class="device-card__content">
-                        <x-knobjs-knob id="modal-1-control" value="23" min="10" max="90">
-                                <div class="x-knobjs-knob__value">+23</div>
-                        </x-knobjs-knob>
-                        <!-- <div class="rotate-control">
-                            <div class="rotate-control__value">+23</div>
-                        </div> -->
                     </div>
-                </div>                       
+                    <div class="device-card__content">
+                        <div class="device-card__control-modes">
+                            <div class="device-card__control-mode device-card__control-mode_active">
+                                Вручную
+                            </div>
+                            <div class="device-card__control-mode">
+                                Дневной свет
+                            </div>
+                            <div class="device-card__control-mode">
+                                Вечерний свет
+                            </div>
+                            <div class="device-card__control-mode">
+                                Рассвет
+                            </div>
+                        </div>                 
+                        <div class="device-card__content__control">
+                            <div class="slider-control slider-control_vertical" data-value="30">
+                                <div class="slider-control__icon slider-control__icon_start"></div>
+                                <div class="slider-control__slider"></div>
+                                <div class="slider-control__icon slider-control__icon_end"></div>                            
+                            </div>                        
+                        </div>                        
+                    </div>
+                </div>
                 <div class="modal-buttons">
                     <div class="modal-buttons__btn modal-buttons__btn_apply">
                         Применить
                     </div>
                     <div class="modal-buttons__btn" data-micromodal-close>
                         Закрыть
-                    </button>
-                </div>                
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 </body>
 <script type="text/javascript" src="http://www.russellmcc.com/knobjs/knob.min.js"></script>
 <script src="index.js"></script>
 <script>
     var knob = document.getElementById("modal-1-control");
     var input = document.querySelector(".x-knobjs-knob__value");
-    knob.onchange = function(){
-      input.innerText = '+' + ~~knob.value;
+    knob.onchange = function () {
+        input.innerText = '+' + ~~knob.value;
     }
 </script>
+
 </html>

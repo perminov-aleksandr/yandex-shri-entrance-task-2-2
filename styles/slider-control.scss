@@ -1,0 +1,106 @@
+@import 'variables';
+
+$slider-size: 60px;
+$slider-gradient-temperature-start: rgba(255,230,130,1);
+$slider-gradient-temperature-end: rgba(255,158,0,1);
+
+.slider-control {
+    display: block;
+    background: rgb(255,230,130);
+    position: relative;
+    margin-top: 5px;
+    user-select: none;
+    border-radius: 30px;
+}
+
+$slider-icon-margin: 12px;
+.slider-control__icon {
+    margin: $slider-icon-margin;
+    width: $slider-size - 2*$slider-icon-margin;
+    height: $slider-size - 2*$slider-icon-margin;
+    background-size: contain;
+    background-repeat: no-repeat;    
+}
+
+.slider-control__icon_start {    
+    background-image: url('../images/icon_sun_min.svg');        
+}
+.slider-control__icon_end {        
+    background-image: url('../images/icon_sun_max.svg');        
+}
+
+$slider-border-width: 4px;
+.slider-control__slider {
+    position: absolute;
+    border: $slider-border-width solid #FFFFFF;
+    box-shadow: 0 1px 10px -7px rgba(0,0,0,0.50);
+    width: $slider-size;
+    height: $slider-size;    
+    border-radius: 50%;    
+}
+.slider-control__slider:hover {
+    cursor: pointer;
+}
+
+.slider-control__slider::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 3px solid rgba(51,51,51,0.10);
+    border-radius: 50%;
+    width: $slider-size;
+    height: $slider-size;
+    box-sizing: border-box;
+}
+
+
+.slider-control_horizontal {    
+    background: linear-gradient(90deg, $slider-gradient-temperature-start 0%, $slider-gradient-temperature-end 100%);    
+    height: $slider-size;            
+}
+
+.slider-control_horizontal .slider-control__icon_start {
+    float: left;    
+    //margin-left: 20px;
+}
+
+.slider-control_horizontal .slider-control__icon_end {
+    float: right;
+    //margin-right: 20px;
+}
+
+.slider-control_horizontal .slider-control__slider {    
+    top: -$slider-border-width;
+    left: 50%;
+}
+
+.slider-control_vertical {
+    width: 60px;
+    min-height: 330px;
+    background: linear-gradient(0deg, $slider-gradient-temperature-start 0%, $slider-gradient-temperature-end 100%);;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider-control_vertical .slider-control__icon_end {
+    position: absolute;
+    left: 0;
+    top: 0;    
+}
+
+.slider-control_vertical .slider-control__icon_start {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.slider-control_vertical .slider-control__slider {    
+    left: -$slider-border-width;
+    top: 50%;
+}
+
+
+
+
+
+
