@@ -5,6 +5,7 @@
 .device-card__header {
     display: block;    
     overflow: auto;
+    margin-bottom: 20px;
 }
 
 .device-card__header__title {        
@@ -20,7 +21,7 @@
 .device-card__status {
     margin-top: 6px;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 16px;    
 }
 
 .device-card__header__info {

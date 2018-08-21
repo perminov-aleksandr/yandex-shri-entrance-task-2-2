@@ -1,8 +1,8 @@
 @import 'variables';
 
 $slider-size: 60px;
-$slider-gradient-temperature-start: rgba(255,230,130,1);
-$slider-gradient-temperature-end: rgba(255,158,0,1);
+$slider-gradient-light-start: rgba(255,230,130,1);
+$slider-gradient-light-end: rgba(255,158,0,1);
 
 .slider-control {
     display: block;
@@ -15,19 +15,14 @@ $slider-gradient-temperature-end: rgba(255,158,0,1);
 
 $slider-icon-margin: 12px;
 .slider-control__icon {
+    position: absolute;
     margin: $slider-icon-margin;
     width: $slider-size - 2*$slider-icon-margin;
     height: $slider-size - 2*$slider-icon-margin;
     background-size: contain;
     background-repeat: no-repeat;  
-    pointer-events: none;  
-}
-
-.slider-control__icon_start {    
-    background-image: url('../images/icon_sun_min.svg');        
-}
-.slider-control__icon_end {        
-    background-image: url('../images/icon_sun_max.svg');        
+    pointer-events: none;
+    box-sizing: border-box;
 }
 
 $slider-border-width: 4px;
@@ -56,43 +51,37 @@ $slider-border-width: 4px;
 
 
 .slider-control_horizontal {    
-    background: linear-gradient(90deg, $slider-gradient-temperature-start 0%, $slider-gradient-temperature-end 100%);    
     height: $slider-size;            
 }
 
-.slider-control_horizontal .slider-control__icon_start {
-    position: absolute;
+.slider-control_theme-light.slider-control_horizontal .slider-control__icon_start {    
     left: 4px;
     top: 0;
 }
 
-.slider-control_horizontal .slider-control__icon_end {
-    position: absolute;
+.slider-control_theme-light.slider-control_horizontal .slider-control__icon_end {
     right: 4px;
     top: 0;
 }
 
 .slider-control_horizontal .slider-control__slider {    
     top: -$slider-border-width;
-    left: 50%;
+    left: 50%;    
 }
 
 .slider-control_vertical {
     width: 60px;
-    min-height: 330px;
-    background: linear-gradient(0deg, $slider-gradient-temperature-start 0%, $slider-gradient-temperature-end 100%);;
+    min-height: 330px;    
     margin-left: auto;
     margin-right: auto;
 }
 
-.slider-control_vertical .slider-control__icon_end {
-    position: absolute;
+.slider-control_theme-light.slider-control_vertical .slider-control__icon_end {    
     left: 0;
     top: 4px;    
 }
 
-.slider-control_vertical .slider-control__icon_start {
-    position: absolute;
+.slider-control_theme-light.slider-control_vertical .slider-control__icon_start {
     left: 0;
     bottom: 4px;
 }
@@ -102,8 +91,72 @@ $slider-border-width: 4px;
     top: 50%;
 }
 
+.slider-control_theme-light .slider-control__icon_start {    
+    background-image: url('../images/icon_sun_min.svg');        
+}
+.slider-control_theme-light .slider-control__icon_end {        
+    background-image: url('../images/icon_sun_max.svg');        
+}
 
+.slider-control_theme-heat .slider-control__icon {
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 21px;    
+    font-weight: bold;
+}
 
+$slider-gradient-heat-start: #068FFF;
+$slider-gradient-heat-middle: #FFD800;
+$slider-gradient-heat-end: #F76B1C;
 
+.slider-control_horizontal.slider-control_theme-heat {
+    background: linear-gradient(90deg, $slider-gradient-heat-start 0%, $slider-gradient-heat-middle 51%, $slider-gradient-heat-end 100%);
+}
+
+.slider-control_vertical.slider-control_theme-heat {
+    background: linear-gradient(0deg, $slider-gradient-heat-start 0%, $slider-gradient-heat-middle 51%, $slider-gradient-heat-end 100%);
+}
+
+.slider-control_horizontal.slider-control_theme-light {
+    background: linear-gradient(90deg, $slider-gradient-light-start 0%, $slider-gradient-light-end 100%);
+}
+
+.slider-control_vertical.slider-control_theme-light {
+    background: linear-gradient(0deg, $slider-gradient-light-start 0%, $slider-gradient-light-end 100%);
+}
+
+.slider-control_theme-heat .slider-control__icon {
+    width: $slider-size;
+    height: $slider-size;
+    margin: 0;    
+}
+
+.slider-control_theme-heat.slider-control_horizontal .slider-control__icon_start {
+    top: 0;
+    left: 0;
+    padding: 21px 0 18px 20px;
+    text-align: left;
+}
+
+.slider-control_theme-heat.slider-control_horizontal .slider-control__icon_end {    
+    right: 0;
+    top: 0;
+    padding: 21px 20px 18px 0;
+    text-align: right;
+}
+
+.slider-control_theme-heat.slider-control_vertical .slider-control__icon_end {
+    top: 0;
+    left: 0;
+    padding: 14px 14px 14px 15px;
+    text-align: center;
+}
+
+.slider-control_theme-heat.slider-control_vertical .slider-control__icon_start {
+    bottom: 0;
+    left: 0;
+    padding: 26px 14px 14px 15px;
+    text-align: center;
+}
 
 
