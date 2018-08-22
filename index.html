@@ -200,43 +200,43 @@
                     </div>
                     <div class="favourite-devices__content swiper-wrapper">
                         <div class="card swiper-slide" data-micromodal-trigger="modal-1">
-                            <div class="card__icon card__icon_light-active"></div>
+                            <div class="card__icon card__icon_light"></div>
                             <div class="card__info">
                                 <div class="card__name">
                                     Xiaomi Yeelight LED Smart Bulb
+                                </div>
+                                <div class="card__description">
+                                    Включится в 17:00
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="card swiper-slide" data-micromodal-trigger="modal-2">
+                            <div class="card__icon card__icon_temperature-active"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Xiaomi Warm Floor
+                                </div>
+                                <div class="card__description">
+                                    Включено
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="card swiper-slide" data-micromodal-trigger="modal-3">
+                            <div class="card__icon card__icon_temperature-active"></div>
+                            <div class="card__info">
+                                <div class="card__name">
+                                    Elgato Eve Degree Connected
                                 </div>
                                 <div class="card__description">
                                     Включено
                                 </div>
                             </div>
                         </div>
-                        <div class="card swiper-slide" data-micromodal-trigger="modal-2">
+                        <div class="card swiper-slide">
                             <div class="card__icon card__icon_light"></div>
                             <div class="card__info">
                                 <div class="card__name">
                                     D-Link Omna 180 Cam
-                                </div>
-                                <div class="card__description">
-                                    Включится в 17:00
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card swiper-slide" data-micromodal-trigger="modal-3">
-                            <div class="card__icon card__icon_temperature"></div>
-                            <div class="card__info">
-                                <div class="card__name">
-                                    Elgato Eve Degree Connected
-                                </div>
-                                <div class="card__description">
-                                    Выключено до 17:00
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card swiper-slide" data-micromodal-trigger="modal-4">
-                            <div class="card__icon card__icon_light"></div>
-                            <div class="card__info">
-                                <div class="card__name">
-                                    LIFX Mini Day &amp; Dusk A60 E27
                                 </div>
                                 <div class="card__description">
                                     Включится в 17:00
@@ -315,47 +315,7 @@
     </div>
     </div>
 
-    <div id="modal-1" aria-hidden="true" class="modal">
-        <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal-dialog">
-            <div class="modal-content device-card">
-                <div class="device-card__header">
-                    <div class="device-card__header__title">
-                        <div class="device-card__name">
-                            Xiaomi Warm Floor
-                        </div>
-                        <div class="device-card__status">
-                            Включено
-                        </div>
-                    </div>
-                    <div class="device-card__header__info">
-                        <span class="device-card__header__info__value">
-                            +23
-                        </span>
-                        <span class="device-card__header__info__icon device-card__header__info__icon-temperature">
-                        </span>
-                    </div>
-                </div>
-                <div class="device-card__content">
-                    <div class="device-card__content__control">
-                        <x-knobjs-knob id="modal-1-control" value="23" min="10" max="90">
-                            <div class="x-knobjs-knob__value">+23</div>
-                        </x-knobjs-knob>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-buttons">
-                <div class="modal-buttons__btn modal-buttons__btn_apply">
-                    Применить
-                </div>
-                <div class="modal-buttons__btn" data-micromodal-close>
-                    Закрыть
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <div id="modal-2" class="modal">
+        <div id="modal-1" class="modal">
             <div role="dialog" class="modal-dialog">
                 <div class="modal-content device-card">
                     <div class="device-card__header">
@@ -395,6 +355,52 @@
                             </div>                        
                         </div>                        
                     </div>
+                </div>
+                <div class="modal-buttons">
+                    <div class="modal-buttons__btn modal-buttons__btn_apply">
+                        Применить
+                    </div>
+                    <div class="modal-buttons__btn" data-micromodal-close>
+                        Закрыть
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-2" class="modal">
+            <div role="dialog" class="modal-dialog">
+                <div class="modal-content device-card">
+                    <div class="device-card__header">
+                        <div class="device-card__header__title">
+                            <div class="device-card__name">
+                                Xiaomi Warm Floor
+                            </div>
+                            <div class="device-card__status">
+                                Включено
+                            </div>
+                        </div>
+                        <div class="device-card__header__info">
+                            <span class="device-card__header__info__value">
+                                +23
+                            </span>
+                            <span class="device-card__header__info__icon device-card__header__info__icon-temperature">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="device-card__content">
+                        <div class="device-card__content__control">
+                            <div class="knob-control" data-min-value="20" data-max-value="30" data-value="23">
+                                <div class="knob-control__value">+23</div>
+                                <div class="knob-control__pointer"></div>
+                                <svg class="knob-control__display">
+                                    <path class="knob-arc"></path>
+                                    <path class="knob-arc-bg"></path>
+                                    <path class="knob-helper"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>                    
                 </div>
                 <div class="modal-buttons">
                     <div class="modal-buttons__btn modal-buttons__btn_apply">
@@ -464,61 +470,7 @@
             </div>
         </div>
 
-        <div id="modal-4" class="modal">
-            <div role="dialog" class="modal-dialog">
-                <div class="modal-content device-card">
-                    <div class="device-card__header">
-                        <div class="device-card__header__title">
-                            <div class="device-card__name">
-                                Xiaomi Warm Floor
-                            </div>
-                            <div class="device-card__status">
-                                Включено
-                            </div>
-                        </div>
-                        <div class="device-card__header__info">
-                            <span class="device-card__header__info__value">
-                                +23
-                            </span>
-                            <span class="device-card__header__info__icon device-card__header__info__icon-temperature">
-                            </span>
-                        </div>
-                    </div>
-                    <div class="device-card__content">
-                        <div class="device-card__content__control">
-                            <div class="knob-control" data-min-value="20" data-max-value="30" data-value="23">
-                                <div class="knob-control__value">+23</div>
-                                <div class="knob-control__pointer"></div>
-                                <svg class="knob-control__display">
-                                    <path class="knob-arc"></path>
-                                    <path class="knob-arc-bg"></path>
-                                    <path class="knob-helper"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>                    
-                </div>
-                <div class="modal-buttons">
-                    <div class="modal-buttons__btn modal-buttons__btn_apply">
-                        Применить
-                    </div>
-                    <div class="modal-buttons__btn" data-micromodal-close>
-                        Закрыть
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        
 </body>
-<script type="text/javascript" src="http://www.russellmcc.com/knobjs/knob.min.js"></script>
 <script src="index.js"></script>
-<script>
-    var knob = document.getElementById("modal-1-control");
-    var input = document.querySelector(".x-knobjs-knob__value");
-    knob.onchange = function () {
-        input.innerText = '+' + ~~knob.value;
-    }
-</script>
-
 </html>
