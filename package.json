@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "scripts/index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+	"build": "webpack --progress"
   },
   "dependencies": {
     "gulp": "^3.9.1",
