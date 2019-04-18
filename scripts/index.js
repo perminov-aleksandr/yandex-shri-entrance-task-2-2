@@ -11,7 +11,7 @@ Header.init();
 
 MicroModal.init({
     onShow: (element) => {
-        document.querySelector(".page").classList.add("page_modal");        
+        document.querySelector(".page").classList.add("page_modal");
         Animations.animateModal(element, 300);
     },
     onClose: (ev) => {

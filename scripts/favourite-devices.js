@@ -1,16 +1,5 @@
-import Swiper from 'swiper';
-
 export default {
     init() {
-        const devicesSwiper = new Swiper('.favourite-devices', {
-            slidesPerView: 'auto', 
-            watchSlidesVisibility: true,   
-            navigation: {
-                nextEl: '.favourite-devices .paging__btn-next',
-                prevEl: '.favourite-devices .paging__btn-prev',
-            },
-        });
-
         this.initFilters();
     },
 
