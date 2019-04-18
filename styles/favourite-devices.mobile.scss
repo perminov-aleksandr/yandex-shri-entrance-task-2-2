@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+    .favourite-devices__content {
+        overflow: auto;
+    }
+
+    .favourite-devices__paging {
+        display: none;
+    }
+}

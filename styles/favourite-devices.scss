@@ -16,8 +16,10 @@
     padding-bottom: 20px;
 }
 
-.favourite-devices__content {    
+.favourite-devices__content {
     padding-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .favourite-devices__filters {
