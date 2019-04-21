@@ -67,6 +67,8 @@ html, body {
 }
 
 .content {
+    display: flex;
+    flex-wrap: wrap;
     box-sizing: border-box;
     width: $page-width;
     margin-left: auto;

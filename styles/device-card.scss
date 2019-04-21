@@ -3,13 +3,13 @@
 }
 
 .device-card__header {
-    display: block;    
+    display: flex;
     overflow: auto;
     margin-bottom: 20px;
 }
 
 .device-card__header__title {        
-    float: left;    
+    
 }
 
 .device-card__name {
@@ -25,20 +25,19 @@
 }
 
 .device-card__header__info {
-    float: right;
+    margin-left: auto;
+    display: flex;
 }
 
 .device-card__header__info__value {
     font-weight: bold;
     font-size: 36px;
-    line-height: 42px;    
-    float: left;
+    line-height: 42px;
 }
 
 .device-card__header__info__icon  {
     width: 42px;
     height: 42px;
-    float: left;
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -52,19 +51,19 @@
 }
 
 .device-card__control-modes {
-    display: block;
+    display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
 .device-card__control-mode {
-    display: inline-block;
     background: #F2F1F0;
     border-radius: 20px;
     font-size: 13px;
     line-height: 15px;
-    padding: 7px 11px 8px 15px;
+    padding: 7px 15px;
     font-weight: bold;
+    margin-right: 5px;
 }
 .device-card__control-mode:hover {
     cursor: pointer;

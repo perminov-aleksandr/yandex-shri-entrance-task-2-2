@@ -1,12 +1,11 @@
 @import 'variables';
 
 .summary {
-    float:left;
-    box-sizing: content-box;    
     width: 630px;
-    padding-right: 16px;    
-    padding-left: 10px;
-    padding-bottom: 5px;    
+    box-sizing: content-box;
+    margin-right: 16px;
+    margin-left: 10px;
+    margin-bottom: 5px;
 }
 
 .summary__header {    
@@ -19,19 +18,21 @@
 .summary__content {
     border-radius: 20px;
     background-image: url('../images/summary-bg@1x.png');
-    background-size: cover;    
+    background-size: cover;
     min-height: 300px;
     padding: 20px;
+    display: flex;
 }
 
 .summary__content__info {
-    display: inline-block;    
+    
 }
 
 .summary__content__queue {
-    display: block;    
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
     width: 200px;
-    float: right;
 }
 
 .summary__content__queue__item {
@@ -53,4 +54,8 @@
     font-size: 14px;
     color: $font-color;
     margin-bottom: 25px;
+}
+
+.summary__content__info__weather-list {
+    display: flex;
 }

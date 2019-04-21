@@ -1,26 +1,19 @@
 @import 'variables';
 
-.header {    
-    display: block;    
+.header {
+    display: flex;
+    align-items: center;
     height: $header-height;
     padding-left: $content-padding + 10px;
     padding-right: $content-padding + 10px;
 }
 
-.header:before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-
-.header__logo {    
-    display: inline-block;    
+.header__logo {
+    
 }
 
 .header__logo__link {
-    vertical-align: middle;
-    display: inline-block;
+    
 }
 
 .header__logo__img {
@@ -28,7 +21,6 @@
 }
 
 .header__menu {
-    display: inline-block;
     padding: 0 26px;
 }
 

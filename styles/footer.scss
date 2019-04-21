@@ -6,10 +6,10 @@ $footer-height: 64px;
     height: $footer-height;    
     padding-left: $content-padding + 10px;
     padding-right: $content-padding + 10px;
+    display: flex;
 }
 
 .footer__link {
-    display: inline-block;
     font-size: 12px;
     color: #858585;
     letter-spacing: 0.01px;
@@ -26,7 +26,7 @@ $footer-height: 64px;
 }
 
 .footer__link_right {
-    float: right;
+    margin-left: auto;
     padding-right: 0;
 }
 

@@ -64,7 +64,7 @@
             }
             
             .favourite-scripts__content .card {
-                float: none;
+                
             }
         
                 .favourite-scripts__content .card:nth-child(3n) {
@@ -108,14 +108,14 @@
 
     .header__menu-icon {
         display: block;
-        float: right;
         background-image: url('../images/icon_list_m@1x.svg');
         background-size: contain;
         background-repeat: no-repeat;
         width: 18px;
         height: 18px;
         margin-top: 24px;
-        margin-right: 20px;        
+        margin-right: 20px;
+        margin-left: auto;
     }
     .header__menu-icon:after {
         clear: both;
@@ -155,7 +155,7 @@
     .icon {
         border: solid $font-color;
         border-width: 0 2px 2px 0;
-        display: inline-block;       
+        display: inline-block;
         padding: 2px;
         margin: 0 2px 2px 0;
     }
@@ -171,14 +171,14 @@
 
     .favourite-devices__filters__active {
         display: block;
-        float: right;
         height: 30px;
         border-radius: 20px;
-        background-color: $accent-color;        
+        background-color: $accent-color;
         box-sizing: border-box;
         z-index: 0;
         padding: 4px 11px (8px+4px) 15px;
         margin-top: -5px;
+        margin-top: auto;
 
         &:hover { 
             cursor: pointer;
@@ -186,13 +186,12 @@
     }
 
     .favourite-devices__filters__active__name {
-        display: inline-block;
-        font-size: 13px;        
+        font-size: 13px;
         line-height: 15px;
-        font-weight: bolder; 
+        font-weight: bolder;
     }
 
-    .favourite-devices__filters {        
+    .favourite-devices__filters {
         position: absolute;
         top: 40px;
         right: 20px;
@@ -234,7 +233,7 @@
         padding-left: 0;
     }
     .footer__link_right {
-        float: left;
+        
     }
 
     //--------------------------------WEATHER

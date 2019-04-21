@@ -1,13 +1,6 @@
 .favourite-scripts {
-    float: left;
-    box-sizing: content-box;    
-    width: 640px;
-    padding-left: 10px;
-    //padding-right: 10px;
-    vertical-align: top;    
+    box-sizing: content-box;
 }
-
-
 
 .favourite-scripts::after {
     clear: both;
@@ -16,21 +9,27 @@
 .favourite-scripts__header {
     color: $font-color;
     font-size: 18px;
-    font-weight: bold;   
-    margin-bottom: 20px;    
-    margin-right: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-left: 10px;
 }
 
 .favourite-scripts__content {
+    box-sizing: border-box;
     overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 .favourite-scripts__content .card:nth-child(3n) {
-    margin-right: 10px;
+    // margin-right: 10px;
 }
 
-.favourite-scripts__content .card {
-    float: left;
-}
+// .favourite-scripts__content .card {
+//     float: left;
+// }
 
 

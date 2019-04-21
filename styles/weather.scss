@@ -1,5 +1,8 @@
+.weather-list {
+    display: flex;
+}
+
 .weather {
-    display: inline-block;
     margin-right: 18px;
 }
 
@@ -11,17 +14,19 @@
     margin-bottom: 4px;
 }
 
+.weather__temperature {
+    display: block;
+}
+
 .weather__temperature__value {
-    display: block;    
+    display: inline-block;
     line-height: 42px;
     font-size: 36px;
     font-weight: bold;
-    float: left;
 }
 
-.weather__icon {    
-    display: block;
-    float: left;
+.weather__icon {
+    display: inline-block;
     height: 26px;
     width: 26px;
     margin-top: 8px;
