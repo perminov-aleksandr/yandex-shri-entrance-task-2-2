@@ -7,9 +7,9 @@
         width: 100%;
     }
 
-    .favourite-scripts {
-        width: calc(100% - 460px);    
-    }
+    // .favourite-scripts {
+    //     width: calc(100% - 460px);
+    // }
 }
 
 @media (min-width: 1024px) and (max-width: $page-width) {
@@ -17,9 +17,9 @@
         width: 100%;
     }
 
-    .favourite-scripts {
-        width: calc(100% - 670px);
-    }
+    // .favourite-scripts {
+    //     width: calc(100% - 670px);
+    // }
 }
 
 @media (max-width: 767px) {
@@ -37,6 +37,10 @@
         padding-top: $header-height;
     }
 
+    .dashboard {
+        flex-wrap: wrap;
+    }
+
     .content {
         width: 100%;
         padding-left: 0;
@@ -47,60 +51,18 @@
         display: none;
     }
 
-    .favourite-scripts {
-        box-sizing: border-box;
-        width: 100%;
-        padding-top: 20px;  
-        padding-right: 20px;      
-        padding-left: 20px;      
-    }
-
-        .favourite-scripts__content {            
-            white-space: nowrap;
-        }
-
-            .favourite-scripts__content > * {
-                white-space: normal;        
-            }
-            
-            .favourite-scripts__content .card {
-                
-            }
-        
-                .favourite-scripts__content .card:nth-child(3n) {
-                    margin-right: 15px;
-                }
-
-                .favourite-scripts__content .card:last-child {
-                    margin-right: 0;
-                }
-
-    .favourite-devices {
-        box-sizing: border-box;
-        width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 0px;
-    }
-
-    .favourite-devices__header {
-        padding-top: 10px;
-    }
-
-    .favourite-devices__content .card:last-child {
-        margin-right: 0;
-    }
-
     //--------------------------------------------- MENU
     
     .header {
+        position: relative;
         padding:0;
-        height: $header-height;              
+        height: $header-height;
+        flex-wrap: wrap;
     }
 
     .header__logo {
-        margin-left: 20px;        
-    }    
+        margin-left: 20px;
+    }
 
     .header__logo__img {
         height: 37px;
@@ -113,26 +75,25 @@
         background-repeat: no-repeat;
         width: 18px;
         height: 18px;
-        margin-top: 24px;
         margin-right: 20px;
         margin-left: auto;
-    }
-    .header__menu-icon:after {
-        clear: both;
-    }
-    .header__menu-icon:hover {
         cursor: pointer;
     }
 
     .header__menu {
+        flex: 0 1 100%;
         display: none;
         background-color: $background-color;
         padding: 0;
-        border: 1px solid $border-color;        
-    }   
+        border: 1px solid $border-color;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+    }
     
     .header__menu_shown {
-        display: block;        
+        display: block;
     }
     
     .header__menu__item {
@@ -163,69 +124,13 @@
     .icon-down {
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
-    }   
-
-    .favourite-devices__filters {             
-        display: none;
-    }
-
-    .favourite-devices__filters__active {
-        display: block;
-        height: 30px;
-        border-radius: 20px;
-        background-color: $accent-color;
-        box-sizing: border-box;
-        z-index: 0;
-        padding: 4px 11px (8px+4px) 15px;
-        margin-top: -5px;
-        margin-top: auto;
-
-        &:hover { 
-            cursor: pointer;
-        }
-    }
-
-    .favourite-devices__filters__active__name {
-        font-size: 13px;
-        line-height: 15px;
-        font-weight: bolder;
-    }
-
-    .favourite-devices__filters {
-        position: absolute;
-        top: 40px;
-        right: 20px;
-        z-index: 10;
-        box-shadow: $box-shadow;
-        padding: 0;
-        border-radius: 20px;
-    }
-
-    .favourite-devices__filters_shown {
-        display: block;
-    }    
-
-    .favourite-devices__filters__item {
-        display: block;
-        border-radius: 0;
-        margin-right: 0;
-        height: unset;     
-        text-align: center;   
-    }
-
-    .favourite-devices__filters__item:first-child {
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-    .favourite-devices__filters__item:last-child {
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
     }
 
     //-------------------------------- FOOOTER
     .footer {
         padding-left: 20px;
         padding-right: 20px;
+        flex-direction: column;
     }
 
     .footer__link {
@@ -233,7 +138,7 @@
         padding-left: 0;
     }
     .footer__link_right {
-        
+        margin-left: 0;
     }
 
     //--------------------------------WEATHER

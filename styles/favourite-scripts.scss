@@ -1,5 +1,5 @@
 .favourite-scripts {
-    box-sizing: content-box;
+    flex: 0 1 50%;
 }
 
 .favourite-scripts::after {
@@ -15,21 +15,23 @@
 }
 
 .favourite-scripts__content {
-    box-sizing: border-box;
     overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 330px;
     padding-bottom: 10px;
     padding-left: 10px;
 }
 
-.favourite-scripts__content .card:nth-child(3n) {
-    // margin-right: 10px;
+.favourite-scripts__content > .card {
+    margin-bottom: 15px;
+    margin-right: 15px;
 }
 
-// .favourite-scripts__content .card {
-//     float: left;
-// }
+.favourite-scripts__content .card:nth-child(3n) {
+
+}
+
 
 

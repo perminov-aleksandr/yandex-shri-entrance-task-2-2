@@ -9,8 +9,8 @@
     font-size: 18px;
     font-weight: bold;       
     line-height: 21px;    
-    padding-top: 34px;
-    padding-bottom: 20px;
+    margin-top: 34px;
+    margin-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
@@ -36,6 +36,7 @@
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 15px;
+    height: 120px;
 }
 
 .favourite-devices__filters {

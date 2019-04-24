@@ -1,8 +1,7 @@
 @import 'variables';
 
 .summary {
-    width: 630px;
-    box-sizing: content-box;
+    flex: 0 0 630px;
     margin-right: 16px;
     margin-left: 10px;
     margin-bottom: 5px;
@@ -19,7 +18,7 @@
     border-radius: 20px;
     background-image: url('../images/summary-bg@1x.png');
     background-size: cover;
-    min-height: 300px;
+    height: 330px;
     padding: 20px;
     display: flex;
 }
@@ -33,10 +32,15 @@
     flex-direction: column;
     margin-left: auto;
     width: 200px;
+    overflow: hidden;
+    margin-bottom: -20px;
 }
 
 .summary__content__queue__item {
     margin-bottom: 15px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    height: 120px;
 }
 
 .summary__content::after {

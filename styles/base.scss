@@ -9,6 +9,10 @@ html, body {
     font-size: 14px;
 }
 
+body * {
+    box-sizing: border-box;
+}
+
 .page {
     display: block;
     height: 100%;
@@ -35,15 +39,17 @@ html, body {
     display: block;
     position: relative;
     z-index: 0;
-    padding-top: $header-height + 30px;    
-    padding-bottom: 0;        
-    overflow: auto;   
+    padding-top: $header-height + 30px;
+    padding-bottom: 0;
+    overflow: auto;
+}
+
+.dashboard {
+    display: flex;
 }
 
 .page_modal {
-    //filter: blur(5px);
     overflow: hidden;
-    //transition: filter 0.3s;    
     position: relative;
 }
 
@@ -67,17 +73,9 @@ html, body {
 }
 
 .content {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
     width: $page-width;
     margin-left: auto;
     margin-right: auto;
     padding-left: $content-padding;
     padding-right: $content-padding;
-}
-
-.swiper-slide, 
-.swiper-wrapper {    
-    height: auto;
 }
