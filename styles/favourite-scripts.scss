@@ -1,5 +1,6 @@
 .favourite-scripts {
     flex: 0 1 50%;
+    overflow: hidden;
 }
 
 .favourite-scripts::after {
@@ -10,28 +11,28 @@
     color: $font-color;
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.favourite-scripts__header__paging {
+    margin-left: auto;
 }
 
 .favourite-scripts__content {
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 330px;
+    overflow: hidden;
+    height: 350px;
     padding-bottom: 10px;
+    padding-top: 10px;
     padding-left: 10px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-auto-flow: column;
 }
-
-.favourite-scripts__content > .card {
-    margin-bottom: 15px;
-    margin-right: 15px;
-}
-
-.favourite-scripts__content .card:nth-child(3n) {
-
-}
-
-
-

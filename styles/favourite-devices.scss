@@ -7,8 +7,8 @@
 .favourite-devices__header {
     color: $font-color;
     font-size: 18px;
-    font-weight: bold;       
-    line-height: 21px;    
+    font-weight: bold;
+    line-height: 21px;
     margin-top: 34px;
     margin-bottom: 20px;
     padding-left: 10px;
@@ -17,9 +17,7 @@
     align-items: center;
 }
 
-.favourite-devices__header__title {
-
-}
+.favourite-devices__header__title {}
 
 .favourite-devices__content {
     padding-top: 5px;
@@ -32,7 +30,7 @@
     flex-wrap: nowrap;
 }
 
-.favourite-devices__content > .card {
+.favourite-devices__content>.card {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 15px;
@@ -43,33 +41,54 @@
     padding: 0 13px;
 }
 
-    .favourite-devices__filters__item {
-        box-sizing: border-box;
-        display: inline-block;
-        height: 30px;
-        border-radius: 20px;
-        background-color: #F7F7F7;
-        color: $font-color;
-        font-size: 13px;
-        line-height: 15px;
-        padding: 7px 15px;
-        font-weight: bold;
-        margin-right: 10px;
-    }
+.favourite-devices__filters__radio {
+    display: none;
+}
 
-        .favourite-devices__filters__item_active {
-            background-color: $accent-color;
-        }
+.favourite-devices__filters__item {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #F7F7F7;
+    color: $font-color;
+    font-size: 13px;
+    line-height: 15px;
+    padding: 7px 15px;
+    font-weight: bold;
+    margin-right: 10px;
+}
 
-        .favourite-devices__filters__item:hover:not(.favourite-devices__filters__item_active) {
-            background: #ffffff;
-            box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
-            cursor: pointer;
-        }
+input[id='fav-device-lights']:checked~.favourite-devices__header .favourite-devices__filters .favourite-devices__filters__item[for='fav-device-lights'],
+input[id='fav-device-all']:checked~.favourite-devices__header .favourite-devices__filters .favourite-devices__filters__item[for='fav-device-all'],
+input[id='fav-device-cameras']:checked~.favourite-devices__header .favourite-devices__filters .favourite-devices__filters__item[for='fav-device-cameras'],
+input[id='fav-device-hall']:checked~.favourite-devices__header .favourite-devices__filters .favourite-devices__filters__item[for='fav-device-hall'],
+input[id='fav-device-kitchen']:checked~.favourite-devices__header .favourite-devices__filters .favourite-devices__filters__item[for='fav-device-kitchen'] {
+    background-color: $accent-color;
+}
 
-    .favourite-devices__filters__active {
-        display: none;
-    }
+.favourite-device {
+    display: block;
+    overflow: hidden;
+    min-width: 200px;
+}
+
+input[name="fav-device"][value="lights"]:checked~.favourite-devices__content .favourite-device:not([data-type~="lights"]),
+input[name="fav-device"][value="cameras"]:checked~.favourite-devices__content .favourite-device:not([data-type~="cameras"]),
+input[name="fav-device"][value="kitchen"]:checked~.favourite-devices__content .favourite-device:not([data-type~="kitchen"]),
+input[name="fav-device"][value="hall"]:checked~.favourite-devices__content .favourite-device:not([data-type~="hall"]) {
+    display: none;
+}
+
+.favourite-devices__filters__item:hover {
+    background: #ffffff;
+    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.50);
+    cursor: pointer;
+}
+
+.favourite-devices__filters__active {
+    display: none;
+}
 
 .favourite-devices__paging {
     user-select: none;

@@ -1,25 +1,23 @@
 .paging {
-    float: right;
-    padding-top: 5px;
-}
-
-.paging::after {
-    clear: both;
+    display: flex;
 }
 
 .paging__btn {
-    display: inline-block;
-    height: 16px;
-    width: 16px;
+    background: none;
+    border: none;
+    padding: 0;
+    height: 30px;
+    width: 30px;
     background-repeat: no-repeat;
+    background-position: center;
     cursor: pointer;
 }
 
-.paging__btn-prev {    
+.paging__btn-prev {
     background-image: url('../images/Icons/arrow-left.svg');
 }
 
-.paging__btn-next {    
+.paging__btn-next {
     background-image: url('../images/Icons/arrow-left.svg');
-    transform: scaleX(-1);    
+    transform: scaleX(-1);
 }

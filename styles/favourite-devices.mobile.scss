@@ -6,21 +6,18 @@
         padding-right: 20px;
         padding-top: 0px;
     }
-
     .favourite-devices__header {
         position: relative;
         margin-top: 10px;
         padding-left: 0;
         padding-right: 0;
     }
-
     .favourite-devices__content {
         overflow: auto;
         margin-left: -20px;
         margin-right: -20px;
         padding-left: 20px;
         padding-right: 20px;
-
         &:after {
             content: "";
             flex: 0 0 20px;
@@ -29,19 +26,15 @@
             width: 20px;
         }
     }
-
     .favourite-devices__content .card:last-child {
         margin-right: 0;
     }
-
     .favourite-devices__paging {
         display: none;
     }
-
     .favourite-devices__filters {
         display: none;
     }
-
     .favourite-devices__filters__active {
         display: block;
         height: 30px;
@@ -53,18 +46,15 @@
         margin-top: -5px;
         margin-top: auto;
         margin-left: auto;
-
-        &:hover { 
+        &:hover {
             cursor: pointer;
         }
     }
-
     .favourite-devices__filters__active__name {
         font-size: 13px;
         line-height: 15px;
         font-weight: bolder;
     }
-
     .favourite-devices__filters {
         position: absolute;
         bottom: 100%;
@@ -74,20 +64,17 @@
         padding: 0;
         border-radius: 20px;
     }
-
     .favourite-devices__filters_shown {
         display: block;
         margin-bottom: 5px;
     }
-
     .favourite-devices__filters__item {
         display: block;
         border-radius: 0;
         margin-right: 0;
-        height: unset;     
-        text-align: center;   
+        height: unset;
+        text-align: center;
     }
-
     .favourite-devices__filters__item:first-child {
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;

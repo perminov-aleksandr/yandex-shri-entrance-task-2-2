@@ -1,12 +1,10 @@
 @import 'variables';
-
 $slider-size: 60px;
-$slider-gradient-light-start: rgba(255,230,130,1);
-$slider-gradient-light-end: rgba(255,158,0,1);
-
+$slider-gradient-light-start: rgba(255, 230, 130, 1);
+$slider-gradient-light-end: rgba(255, 158, 0, 1);
 .slider-control {
     display: block;
-    background: rgb(255,230,130);
+    background: rgb(255, 230, 130);
     position: relative;
     margin-top: 5px;
     user-select: none;
@@ -20,7 +18,7 @@ $slider-icon-margin: 12px;
     width: $slider-size - 2*$slider-icon-margin;
     height: $slider-size - 2*$slider-icon-margin;
     background-size: contain;
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat;
     pointer-events: none;
     box-sizing: border-box;
 }
@@ -29,32 +27,21 @@ $slider-border-width: 4px;
 .slider-control__slider {
     position: absolute;
     border: $slider-border-width solid #FFFFFF;
-    box-shadow: 0 1px 10px -7px rgba(0,0,0,0.50);
-    width: $slider-size;
-    height: $slider-size;    
-    border-radius: 50%;    
+    box-shadow: 0 1px 10px -7px rgba(0, 0, 0, 0.50), 0 0 0 3px rgba(51, 51, 51, 0.1) inset;
+    width: calc(#{$slider-size} + 2*3px);
+    height: calc(#{$slider-size} + 2*3px);
+    border-radius: 50%;
 }
+
 .slider-control__slider:hover {
     cursor: pointer;
 }
 
-.slider-control__slider::before {
-    content: '';
-    display: block;
-    position: absolute;
-    border: 3px solid rgba(51,51,51,0.10);
-    border-radius: 50%;
-    width: $slider-size;
+.slider-control_horizontal {
     height: $slider-size;
-    box-sizing: border-box;
 }
 
-
-.slider-control_horizontal {    
-    height: $slider-size;            
-}
-
-.slider-control_theme-light.slider-control_horizontal .slider-control__icon_start {    
+.slider-control_theme-light.slider-control_horizontal .slider-control__icon_start {
     left: 4px;
     top: 0;
 }
@@ -64,21 +51,21 @@ $slider-border-width: 4px;
     top: 0;
 }
 
-.slider-control_horizontal .slider-control__slider {    
+.slider-control_horizontal .slider-control__slider {
     top: -$slider-border-width;
-    left: 50%;    
+    left: 50%;
 }
 
 .slider-control_vertical {
     width: 60px;
-    min-height: 330px;    
+    min-height: 330px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.slider-control_theme-light.slider-control_vertical .slider-control__icon_end {    
+.slider-control_theme-light.slider-control_vertical .slider-control__icon_end {
     left: 0;
-    top: 4px;    
+    top: 4px;
 }
 
 .slider-control_theme-light.slider-control_vertical .slider-control__icon_start {
@@ -86,29 +73,29 @@ $slider-border-width: 4px;
     bottom: 4px;
 }
 
-.slider-control_vertical .slider-control__slider {    
+.slider-control_vertical .slider-control__slider {
     left: -$slider-border-width;
     top: 50%;
 }
 
-.slider-control_theme-light .slider-control__icon_start {    
-    background-image: url('../images/icon_sun_min.svg');        
+.slider-control_theme-light .slider-control__icon_start {
+    background-image: url('../images/icon_sun_min.svg');
 }
-.slider-control_theme-light .slider-control__icon_end {        
-    background-image: url('../images/icon_sun_max.svg');        
+
+.slider-control_theme-light .slider-control__icon_end {
+    background-image: url('../images/icon_sun_max.svg');
 }
 
 .slider-control_theme-heat .slider-control__icon {
     font-size: 18px;
     color: #FFFFFF;
-    line-height: 21px;    
+    line-height: 21px;
     font-weight: bold;
 }
 
 $slider-gradient-heat-start: #068FFF;
 $slider-gradient-heat-middle: #FFD800;
 $slider-gradient-heat-end: #F76B1C;
-
 .slider-control_horizontal.slider-control_theme-heat {
     background: linear-gradient(90deg, $slider-gradient-heat-start 0%, $slider-gradient-heat-middle 51%, $slider-gradient-heat-end 100%);
 }
@@ -128,7 +115,7 @@ $slider-gradient-heat-end: #F76B1C;
 .slider-control_theme-heat .slider-control__icon {
     width: $slider-size;
     height: $slider-size;
-    margin: 0;    
+    margin: 0;
 }
 
 .slider-control_theme-heat.slider-control_horizontal .slider-control__icon_start {
@@ -138,7 +125,7 @@ $slider-gradient-heat-end: #F76B1C;
     text-align: left;
 }
 
-.slider-control_theme-heat.slider-control_horizontal .slider-control__icon_end {    
+.slider-control_theme-heat.slider-control_horizontal .slider-control__icon_end {
     right: 0;
     top: 0;
     padding: 21px 20px 18px 0;
@@ -158,5 +145,3 @@ $slider-gradient-heat-end: #F76B1C;
     padding: 26px 14px 14px 15px;
     text-align: center;
 }
-
-
